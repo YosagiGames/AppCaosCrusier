@@ -9,6 +9,8 @@ O aplicativo irá conter as seguintes abas:
 
 ## Wiki
  - <a href="https://github.com/YosagiGames/AppCaosCruiser/wiki"> Home da Wiki </a>
+ - <a href="https://github.com/YosagiGames/AppCaosCruiser/wiki/Prot%C3%B3tipo"> Protótipo </a>
+ - <a href="https://github.com/YosagiGames/AppCaosCruiser/wiki/Desenvolvimento"> Desenvolvimento </a>
 
 ## Links externos
   - <a href="https://www.figma.com/design/ijJD3BGB6cjX9yy0TPGd63/Caos-Cruiser-App?node-id=0-1&t=E48Jm21ChwONgqTl-1"> Link do Figma </a>
