@@ -12,26 +12,27 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyApp extends State<MyApp> {
-  int _opcaoSelecionada = 0;
+  int _opcaoSelecionada = 0; //define qual é a página da BottomNavigationBar
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 119, 0, 0),
+        backgroundColor: const Color.fromARGB(255, 119, 0, 0), //cor de fundo da AppBar
         title: const Text('Caos Cruiser',
           style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),),),
         centerTitle: true,
       ),
       bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        fixedColor: const Color.fromARGB(255, 119, 0, 0),
+        type: BottomNavigationBarType.fixed, //define que a BottomnavigationBar pode ter mais do que 3 itens
+        fixedColor: const Color.fromARGB(255, 255, 255, 255),
+        backgroundColor: const Color.fromARGB(255, 119, 0, 0),
         currentIndex: _opcaoSelecionada,
         onTap: (opcao){
           setState(() {
             _opcaoSelecionada = opcao;
-          });
+          }); //define o estado da BottomNavigationBar de acordo com a opção que foi selecionada
         },
         items: const [
           BottomNavigationBarItem(
@@ -56,7 +57,7 @@ class _MyApp extends State<MyApp> {
           PersoCenPag(),
           YosagiPag(),
         ],
-      )
+      ) //função que faz a mudança de tela usando o index
     )
     );
   }
@@ -68,11 +69,13 @@ class HomePag extends StatelessWidget{
   @override
   Widget build(BuildContext context){
   return const Scaffold(
+    backgroundColor: Color.fromARGB(255, 92, 0, 0),
     body: Center(
         child: Column(
           children: <Widget>[
             Text(
               'Caos Cruiser',
+              style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
             ),
           ],
         ),
@@ -86,11 +89,13 @@ class GamePag extends StatelessWidget{
   @override
   Widget build(BuildContext context){
   return const Scaffold(
+    backgroundColor: Color.fromARGB(255, 92, 0, 0),
     body: Center(
         child: Column(
           children: <Widget>[
             Text(
               'Jogo',
+              style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
             ),
           ],
         ),
@@ -105,11 +110,13 @@ class PersoCenPag extends StatelessWidget{
   @override
   Widget build(BuildContext context){
   return const Scaffold(
+    backgroundColor: Color.fromARGB(255, 92, 0, 0),
     body: Center(
         child: Column(
           children: <Widget>[
             Text(
               'Personagem',
+              style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
             ),
           ],
         ),
@@ -124,11 +131,13 @@ class YosagiPag extends StatelessWidget{
   @override
   Widget build(BuildContext context){
   return const Scaffold(
+    backgroundColor: Color.fromARGB(255, 92, 0, 0),
     body: Center(
         child: Column(
           children: <Widget>[
             Text(
-              'Personagem',
+              'Yosagi',
+              style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
             ),
           ],
         ),
