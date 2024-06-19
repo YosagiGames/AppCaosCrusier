@@ -26,8 +26,8 @@ class _MyApp extends State<MyApp> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed, //define que a BottomnavigationBar pode ter mais do que 3 itens
-        fixedColor: const Color.fromARGB(255, 255, 255, 255),
-        backgroundColor: const Color.fromARGB(255, 119, 0, 0),
+        fixedColor: Color.fromARGB(255, 218, 204, 13),
+        backgroundColor: const Color.fromARGB(255, 99, 99, 99),
         currentIndex: _opcaoSelecionada,
         onTap: (opcao){
           setState(() {
@@ -43,19 +43,19 @@ class _MyApp extends State<MyApp> {
             label: 'Sobre o jogo'),
           BottomNavigationBarItem(
             icon: Icon(Icons.sports_motorsports),
-            label: 'Perso e cenário'),
+            label: 'Personagens'),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Sobre a Yosagi'),
+            icon: Icon(Icons.image_rounded),
+            label: 'Cenários'),
         ], 
       ),
       body: IndexedStack(
         index: _opcaoSelecionada,
         children: const <Widget>[
-          HomePag(),
-          GamePag(),
-          PersoCenPag(),
-          YosagiPag(),
+          Home(),
+          Game(),
+          Personagem(),
+          Cenario(),
         ],
       ) //função que faz a mudança de tela usando o index
     )
@@ -63,13 +63,13 @@ class _MyApp extends State<MyApp> {
   }
 }
 
-class HomePag extends StatelessWidget{
-  const HomePag ({super.key,});
+class Home extends StatelessWidget{
+  const Home ({super.key,});
 
   @override
   Widget build(BuildContext context){
   return const Scaffold(
-    backgroundColor: Color.fromARGB(255, 92, 0, 0),
+    backgroundColor: Color.fromARGB(255, 34, 34, 34),
     body: Center(
         child: Column(
           children: <Widget>[
@@ -83,13 +83,13 @@ class HomePag extends StatelessWidget{
   );
 }}
 
-class GamePag extends StatelessWidget{
-  const GamePag ({super.key,});
+class Game extends StatelessWidget{
+  const Game ({super.key,});
 
   @override
   Widget build(BuildContext context){
   return const Scaffold(
-    backgroundColor: Color.fromARGB(255, 92, 0, 0),
+    backgroundColor: Color.fromARGB(255, 34, 34, 34),
     body: Center(
         child: Column(
           children: <Widget>[
@@ -104,13 +104,13 @@ class GamePag extends StatelessWidget{
 }
 }
 
-class PersoCenPag extends StatelessWidget{
-  const PersoCenPag ({super.key,});
+class Personagem extends StatelessWidget{
+  const Personagem ({super.key,});
 
   @override
   Widget build(BuildContext context){
   return const Scaffold(
-    backgroundColor: Color.fromARGB(255, 92, 0, 0),
+    backgroundColor: Color.fromARGB(255, 34, 34, 34),
     body: Center(
         child: Column(
           children: <Widget>[
@@ -125,18 +125,18 @@ class PersoCenPag extends StatelessWidget{
 }
 }
 
-class YosagiPag extends StatelessWidget{
-  const YosagiPag ({super.key,});
+class Cenario extends StatelessWidget{
+  const Cenario ({super.key,});
 
   @override
   Widget build(BuildContext context){
   return const Scaffold(
-    backgroundColor: Color.fromARGB(255, 92, 0, 0),
+    backgroundColor: Color.fromARGB(255, 34, 34, 34),
     body: Center(
         child: Column(
           children: <Widget>[
             Text(
-              'Yosagi',
+              'Cenário',
               style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
             ),
           ],
