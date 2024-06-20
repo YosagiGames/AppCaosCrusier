@@ -19,15 +19,15 @@ class _MyApp extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 119, 0, 0), //cor de fundo da AppBar
+        backgroundColor: const Color.fromARGB(255, 150, 0, 0), //cor de fundo da AppBar
         title: const Text('Caos Cruiser',
           style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),),),
         centerTitle: true,
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed, //define que a BottomnavigationBar pode ter mais do que 3 itens
-        fixedColor: Color.fromARGB(255, 218, 204, 13),
-        backgroundColor: const Color.fromARGB(255, 99, 99, 99),
+        fixedColor: const Color.fromARGB(255, 209, 209, 209),
+        backgroundColor: const Color.fromARGB(255, 150, 0, 0),
         currentIndex: _opcaoSelecionada,
         onTap: (opcao){
           setState(() {
@@ -68,20 +68,48 @@ class Home extends StatelessWidget{
 
   @override
   Widget build(BuildContext context){
-  return const Scaffold(
-    backgroundColor: Color.fromARGB(255, 34, 34, 34),
+  return Scaffold(
+    backgroundColor: const Color.fromARGB(255, 34, 34, 34),
     body: Center(
-        child: Column(
-          children: <Widget>[
-            Text(
-              'Caos Cruiser',
-              style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
-            ),
-          ],
+        child: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topRight,
+              end: Alignment.bottomLeft,
+              colors: [
+                Color.fromARGB(255, 243, 33, 33),
+                Color.fromARGB(193, 255, 171, 44),
+              ],
+            )
+          ),
+          child: Center(
+            child: Column(
+              children: [
+                Image.asset('img/capa.jpg', width: 310, height: 200,),
+                const SizedBox(
+                  width: 380,
+                  child: Text('Caos Cruiser é um jogo de corrida retrô inspirado nos jogos de corrida clássico dos anos 80 a 90, com o objetivo de ultrapassar diversos carros em um período de um dia.',
+                    style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,),
+                  ),
+                ),
+                const SizedBox(
+                  width: 380,
+                  child: Text('Se passa ao redor do mundo viajando por alguns países como Inglaterra, Brasil, Japão, Austrália e Egito, onde cada um tem sua estética de ambiente diferente, além de terem alguns fatores naturais únicos que o jogador enfrentará para vencer seus adversários. Com diversas opções de carros com diferentes habilidades especiais e estilos que os tornam mais incríveis e divertidos. Fique atento à pista e não relaxe pois será ultrapassado.',
+                    style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,),
+                  ),
+                ),
+              ]
+          ),
         ),
       ),
+  )
   );
-}}
+}
+}
 
 class Game extends StatelessWidget{
   const Game ({super.key,});
