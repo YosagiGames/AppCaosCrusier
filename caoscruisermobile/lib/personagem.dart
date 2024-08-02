@@ -23,7 +23,10 @@ class Personagem extends StatelessWidget{
           children: <Widget>[
              const Text(
               'Personagem',
-              style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
+              style: TextStyle(
+                fontFamily: 'ABeeZee',
+                fontSize: 18,
+                color: Color.fromARGB(255, 255, 255, 255)),
             ),
             Image.asset('img/carro_gt40.png', width: 310, height: 200,),
           ],

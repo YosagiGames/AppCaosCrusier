@@ -18,16 +18,21 @@ class Cenario extends StatelessWidget{
               ],
             )
           ),
-        child: Column(
-          children: <Widget>[
+        child: Center(
+          child: Column(
+          children: [
             const Text(
               'Cenário',
-              style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
+              style: TextStyle(
+                fontFamily: 'ABeeZee',
+                fontSize: 18,
+                color: Color.fromARGB(255, 255, 255, 255)),
             ),
             Image.asset('img/scene_jp.png', width: 310, height: 200,),
           ],
         ),
       ),)
+      )
   );
 }
 }
