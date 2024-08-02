@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class Cenario extends StatelessWidget{
   const Cenario ({super.key,});
 
@@ -22,7 +24,7 @@ class Cenario extends StatelessWidget{
               'Cenário',
               style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
             ),
-            Image.asset('img/scene_jp.png'),
+            Image.asset('img/scene_jp.png', width: 310, height: 200,),
           ],
         ),
       ),)

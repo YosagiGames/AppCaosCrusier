@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class Home extends StatelessWidget{
   const Home ({super.key,});
 
@@ -24,7 +26,6 @@ class Home extends StatelessWidget{
                   width: 380,
                   child: Text('Caos Cruiser é um jogo de corrida retrô inspirado nos jogos de corrida clássico dos anos 80 a 90, com o objetivo de ultrapassar diversos carros em um período de um dia.',
                     style: TextStyle(
-                    fontWeight: FontWeight.bold,
                     color: Colors.white,),
                   ),
                 ),
@@ -32,7 +33,6 @@ class Home extends StatelessWidget{
                   width: 380,
                   child: Text('Se passa ao redor do mundo viajando por alguns países como Inglaterra, Brasil, Japão, Austrália e Egito, onde cada um tem sua estética de ambiente diferente, além de terem alguns fatores naturais únicos que o jogador enfrentará para vencer seus adversários. Com diversas opções de carros com diferentes habilidades especiais e estilos que os tornam mais incríveis e divertidos. Fique atento à pista e não relaxe pois será ultrapassado.',
                     style: TextStyle(
-                    fontWeight: FontWeight.bold,
                     color: Colors.white,),
                   ),
                 ),

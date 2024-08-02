@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class Personagem extends StatelessWidget{
   const Personagem ({super.key,});
 
@@ -16,16 +18,17 @@ class Personagem extends StatelessWidget{
               ],
             )
           ),
-        child: Column(
+        child: Center(
+          child: Column(
           children: <Widget>[
              const Text(
               'Personagem',
               style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
             ),
-            Image.asset('img/carro_gt40.png'),
+            Image.asset('img/carro_gt40.png', width: 310, height: 200,),
           ],
         ),
-      ),)
+      ),))
   );
 }
 }
