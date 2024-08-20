@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:caoscruisermobile/home.dart';
-import 'package:caoscruisermobile/game.dart';
-import 'package:caoscruisermobile/personagem.dart';
-import 'package:caoscruisermobile/cenario.dart';
+import 'package:caoscruisermobile/homepag.dart';
+import 'package:caoscruisermobile/gamepag.dart';
+import 'package:caoscruisermobile/personagempag.dart';
+import 'package:caoscruisermobile/cenariopag.dart';
 
 void main() {
   runApp(const MyApp());
