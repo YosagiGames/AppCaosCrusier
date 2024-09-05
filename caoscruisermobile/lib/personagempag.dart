@@ -1,7 +1,45 @@
 import 'package:flutter/material.dart';
+import 'package:caoscruisermobile/personagem.dart';
 
-class Personagem extends StatelessWidget{
-  const Personagem ({super.key,});
+/*class Personagem {
+  final String nome;
+  final String img;
+  final String nomepiloto;
+  final String habilidade;
+
+  Personagem({
+    required this.nome,
+    required this.img,
+    required this.nomepiloto,
+    required this.habilidade
+  });
+
+  void avancar(){
+    //metodo vazio por enquanto
+  }
+
+  void voltar(){
+    //método vazio por enquanto
+  }
+
+  void mudarAuto(){
+    //método vazio por enquanto
+  }
+}*/
+
+class PersonagemPag extends StatefulWidget{
+  const PersonagemPag ({super.key,});
+
+  @override
+  State<PersonagemPag> createState() => _PersonagemPag();
+}
+
+
+
+class _PersonagemPag extends State<PersonagemPag> {
+  Personagem apophis = Personagem('Apophis', 'img/carro_apophis.png', 'nomepiloto', 'habilidade');
+  List<Personagem> personagens = [];
+  int pt = 0;
 
   @override
   Widget build(BuildContext context){
@@ -21,14 +59,11 @@ class Personagem extends StatelessWidget{
         child: Center(
           child: Column(
           children: <Widget>[
-             const Text(
-              'Personagem',
-              style: TextStyle(
-                fontFamily: 'ABeeZee',
-                fontSize: 18,
-                color: Color.fromARGB(255, 255, 255, 255)),
-            ),
-            Image.asset('img/carro_gt40.png', width: 310, height: 200,),
+             ElevatedButton(
+              onPressed:(){
+                
+              },
+              child: const Text('Avançar imagem')),
           ],
         ),
       ),))

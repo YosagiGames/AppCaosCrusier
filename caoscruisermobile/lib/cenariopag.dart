@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Cenario extends StatelessWidget{
-  const Cenario ({super.key,});
+class CenarioPag extends StatelessWidget{
+  const CenarioPag ({super.key,});
 
   @override
   Widget build(BuildContext context){

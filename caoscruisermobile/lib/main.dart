@@ -56,10 +56,10 @@ class _MyApp extends State<MyApp> {
       body: IndexedStack(
         index: _opcaoSelecionada,
         children: const <Widget>[
-          Home(),
-          Game(),
-          Personagem(),
-          Cenario(),
+          HomePag(),
+          GamePag(),
+          PersonagemPag(),
+          CenarioPag(),
         ],
       ) //função que faz a mudança de tela usando o index
     )
