@@ -1,32 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:caoscruisermobile/personagem.dart';
 
-/*class Personagem {
-  final String nome;
-  final String img;
-  final String nomepiloto;
-  final String habilidade;
-
-  Personagem({
-    required this.nome,
-    required this.img,
-    required this.nomepiloto,
-    required this.habilidade
-  });
-
-  void avancar(){
-    //metodo vazio por enquanto
-  }
-
-  void voltar(){
-    //método vazio por enquanto
-  }
-
-  void mudarAuto(){
-    //método vazio por enquanto
-  }
-}*/
-
 class PersonagemPag extends StatefulWidget{
   const PersonagemPag ({super.key,});
 
@@ -34,12 +8,22 @@ class PersonagemPag extends StatefulWidget{
   State<PersonagemPag> createState() => _PersonagemPag();
 }
 
-
-
 class _PersonagemPag extends State<PersonagemPag> {
-  Personagem apophis = Personagem('Apophis', 'img/carro_apophis.png', 'nomepiloto', 'habilidade');
-  List<Personagem> personagens = [];
-  int pt = 0;
+
+  List<Personagem> personagens = [
+    Personagem('Apophis', 'img/carros/carro_apophis.jpeg', 'nomepiloto', 'habilidade'),
+    Personagem('Caçador', 'img/carros/carro_cacador.jpeg', 'nomepiloto', 'habilidade'),
+    Personagem('E.V.A.', 'img/carros/carro_eva.jpeg', 'nomepiloto', 'habilidade'),
+    Personagem('Mercúrio', 'img/carros/carro_mercurio.jpeg', 'nomepiloto', 'habilidade'),
+    Personagem('Raptor', 'img/carros/carro_raptor.jpeg', 'nomepiloto', 'habilidade'),
+    Personagem('Ultravioleta', 'img/carros/carro_ultravioleta.jpeg', 'nomepiloto', 'habilidade'),
+  ];
+
+  int index = 0;
+
+  avancar(){
+    index + 1;
+  }
 
   @override
   Widget build(BuildContext context){
@@ -58,15 +42,24 @@ class _PersonagemPag extends State<PersonagemPag> {
           ),
         child: Center(
           child: Column(
-          children: <Widget>[
-             ElevatedButton(
+          children: [
+            Text(personagens[index].nome, style: const TextStyle(color: Colors.white),),
+            Image.asset(personagens[index].img),
+            Text(personagens[index].nomepiloto, style: const TextStyle(color: Colors.white),),
+            Text(personagens[index].habilidade, style: const TextStyle(color: Colors.white),),
+            ElevatedButton(
               onPressed:(){
-                
+                avancar();
               },
-              child: const Text('Avançar imagem')),
+              child: const Text(
+                'Avançar imagem',
+                style: TextStyle(color: Color.fromARGB(255, 150, 0, 0)),)
+            ),
           ],
+          ),
         ),
-      ),))
+      )
+    )
   );
 }
 }

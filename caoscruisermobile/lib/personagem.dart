@@ -4,7 +4,10 @@ class Personagem {
   final String nomepiloto;
   final String habilidade;
 
-  
-
-  Personagem(this.nome, this.img, this.nomepiloto, this.habilidade);
+  Personagem(
+    this.nome,
+    this.img,
+    this.nomepiloto,
+    this.habilidade
+  );
 }

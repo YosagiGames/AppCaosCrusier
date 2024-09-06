@@ -28,7 +28,7 @@ class CenarioPag extends StatelessWidget{
                 fontSize: 18,
                 color: Color.fromARGB(255, 255, 255, 255)),
             ),
-            Image.asset('img/scene_jp.png', width: 310, height: 200,),
+            Image.asset('img/cenario/scene_jp.png', width: 310, height: 200,),
           ],
         ),
       ),)
