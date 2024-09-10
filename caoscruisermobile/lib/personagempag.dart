@@ -22,7 +22,7 @@ class _PersonagemPag extends State<PersonagemPag> {
   int index = 0;
 
   avancar(){
-    index + 1;
+    index = index + 1;
   }
 
   @override
