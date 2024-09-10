@@ -11,12 +11,12 @@ class PersonagemPag extends StatefulWidget{
 class _PersonagemPag extends State<PersonagemPag> {
 
   List<Personagem> personagens = [
-    Personagem('Apophis', 'img/carros/carro_apophis.jpeg', 'nomepiloto', 'habilidade'),
-    Personagem('Caçador', 'img/carros/carro_cacador.jpeg', 'nomepiloto', 'habilidade'),
-    Personagem('E.V.A.', 'img/carros/carro_eva.jpeg', 'nomepiloto', 'habilidade'),
-    Personagem('Mercúrio', 'img/carros/carro_mercurio.jpeg', 'nomepiloto', 'habilidade'),
-    Personagem('Raptor', 'img/carros/carro_raptor.jpeg', 'nomepiloto', 'habilidade'),
-    Personagem('Ultravioleta', 'img/carros/carro_ultravioleta.jpeg', 'nomepiloto', 'habilidade'),
+    Personagem('Apophis', 'img/carros/apophis.jpeg', 'nomepiloto', 'habilidade'),
+    Personagem('Caçador', 'img/carros/cacador.jpeg', 'nomepiloto', 'habilidade'),
+    Personagem('E.V.A.', 'img/carros/eva.jpeg', 'nomepiloto', 'habilidade'),
+    Personagem('Mercúrio', 'img/carros/mercurio.jpeg', 'nomepiloto', 'habilidade'),
+    Personagem('Raptor', 'img/carros/raptor.jpeg', 'nomepiloto', 'habilidade'),
+    Personagem('Ultravioleta', 'img/carros/ultravioleta.jpeg', 'nomepiloto', 'habilidade'),
   ];
 
   int index = 0;
