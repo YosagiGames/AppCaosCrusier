@@ -1,47 +1,50 @@
 import 'package:flutter/material.dart';
-import 'package:caoscruisermobile/personagem.dart';
-import 'dart:async';
+import 'package:caoscruisermobile/carro.dart';
 
-class PersonagemPag extends StatefulWidget{
-  const PersonagemPag ({super.key,});
+class CarroPag extends StatefulWidget{
+  const CarroPag ({super.key,});
 
   @override
-  State<PersonagemPag> createState() => _PersonagemPag();
+  State<CarroPag> createState() => _CarroPag();
 }
 
-class _PersonagemPag extends State<PersonagemPag> {
-
-  List<Personagem> personagens = [
-    Personagem('Apophis', 'img/carros/apophis.jpeg', 'nomepiloto', 'habilidade'),
-    Personagem('Caçador', 'img/carros/cacador.jpeg', 'nomepiloto', 'habilidade'),
-    Personagem('E.V.A.', 'img/carros/eva.jpeg', 'nomepiloto', 'habilidade'),
-    Personagem('Mercúrio', 'img/carros/mercurio.jpeg', 'nomepiloto', 'habilidade'),
-    Personagem('Raptor', 'img/carros/raptor.jpeg', 'nomepiloto', 'habilidade'),
-    Personagem('Ultravioleta', 'img/carros/ultravioleta.jpeg', 'nomepiloto', 'habilidade'),
-  ];
+class _CarroPag extends State<CarroPag> {
 
   int index = 0;
+  int pasta = 0;
+  int i = 0;
 
   avancar(){
     setState(() {
-      index = index + 1;
+      i = i + 1;
     });
-    if(index >= 6){
-      index = 0;
+    if(i >= 6){
+      i = 0;
     }
   }
 
   voltar(){
     setState(() {
-      index = index - 1;
+      i = i - 1;
     });
-    if(index <= -1){
-      index = 5;
+    if(i <= -1){
+      i = 5;
     }
   }
 
   @override
   Widget build(BuildContext context){
+
+    List<String> imagens = [
+      'img/carros/$pasta/$index.png'
+    ];
+
+    List<Carro> carros = [
+      Carro('Apophis', 'img', 'nome', 'aaa'),
+    ];
+
+  pasta = index;
+
   return Scaffold(
     body: Center(
       child: Container(
@@ -58,10 +61,10 @@ class _PersonagemPag extends State<PersonagemPag> {
         child: Center(
           child: Column(
           children: [
-            Text(personagens[index].nome, style: const TextStyle(color: Colors.white),),
-            Image.asset(personagens[index].img),
-            Text(personagens[index].nomepiloto, style: const TextStyle(color: Colors.white),),
-            Text(personagens[index].habilidade, style: const TextStyle(color: Colors.white),),
+            Text(imagens[index], style: const TextStyle(color: Colors.white),),
+            Image.asset(imagens[index]),
+            Text(imagens[index], style: const TextStyle(color: Colors.white),),
+            Text(imagens[index], style: const TextStyle(color: Colors.white),),
             Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
