@@ -39,15 +39,10 @@ class _CarroPag extends State<CarroPag> {
       'img/carros/$pasta/$index.png'
     ];
 
-    List<Carro> carros = [
-      Carro('Apophis', 'img', 'nome', 'aaa'),
-    ];
-
-  pasta = index;
-
-  return Scaffold(
-    body: Center(
-      child: Container(
+    final carro = ModalRoute.of(context)!.settings.arguments as Carro;
+    return Scaffold(
+      body: Center(
+        child: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.topRight,
@@ -61,10 +56,10 @@ class _CarroPag extends State<CarroPag> {
         child: Center(
           child: Column(
           children: [
-            Text(imagens[index], style: const TextStyle(color: Colors.white),),
+            Text(carro.nome, style: const TextStyle(color: Colors.white),),
             Image.asset(imagens[index]),
-            Text(imagens[index], style: const TextStyle(color: Colors.white),),
-            Text(imagens[index], style: const TextStyle(color: Colors.white),),
+            Text(carro.nomepiloto, style: const TextStyle(color: Colors.white),),
+            Text(carro.habilidade, style: const TextStyle(color: Colors.white),),
             Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
