@@ -1,10 +1,10 @@
-class Personagem {
+class Carro {
   final String nome;
   final String img;
   final String nomepiloto;
   final String habilidade;
 
-  Personagem(
+  Carro(
     this.nome,
     this.img,
     this.nomepiloto,

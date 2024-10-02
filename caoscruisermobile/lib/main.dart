@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:caoscruisermobile/homepag.dart';
 import 'package:caoscruisermobile/gamepag.dart';
-import 'package:caoscruisermobile/personagempag.dart';
+import 'package:caoscruisermobile/carselectpag.dart';
 import 'package:caoscruisermobile/cenariopag.dart';
 
 void main() {
@@ -59,7 +59,7 @@ class _MyApp extends State<MyApp> {
         children: const <Widget>[
           HomePag(),
           GamePag(),
-          PersonagemPag(),
+          CarSelectPag(),
           CenarioPag(),
         ],
       ) //função que faz a mudança de tela usando o index
