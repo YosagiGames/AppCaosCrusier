@@ -23,15 +23,16 @@ class _MyApp extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 150, 0, 0), //cor de fundo da AppBar
+        backgroundColor: const Color.fromARGB(255, 66, 6, 90), //cor de fundo da AppBar
         title: const Text('Caos Cruiser',
           style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),),),
         centerTitle: true,
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed, //define que a BottomnavigationBar pode ter mais do que 3 itens
-        fixedColor: const Color.fromARGB(255, 209, 209, 209),
-        backgroundColor: const Color.fromARGB(255, 150, 0, 0),
+        fixedColor: const Color.fromARGB(255, 255, 255, 255),
+        unselectedItemColor: const Color.fromARGB(255, 182, 26, 187),
+        backgroundColor: const Color.fromARGB(255, 66, 6, 90),
         currentIndex: _opcaoSelecionada,
         onTap: (opcao){
           setState(() {
