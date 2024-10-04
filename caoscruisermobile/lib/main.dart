@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:caoscruisermobile/homepag.dart';
 import 'package:caoscruisermobile/gamepag.dart';
+import 'package:caoscruisermobile/artepag.dart';
 import 'package:caoscruisermobile/carselectpag.dart';
 import 'package:caoscruisermobile/cenariopag.dart';
 
@@ -23,46 +24,84 @@ class _MyApp extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 66, 6, 90), //cor de fundo da AppBar
+        flexibleSpace: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: <Color>[
+                Color.fromARGB(255, 0, 20, 49), 
+                Color.fromARGB(255, 15, 66, 107)
+              ]
+            ),
+          ),
+        ), //cor de fundo da AppBar
         title: const Text('Caos Cruiser',
-          style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),),),
+          style: TextStyle(color: Color.fromARGB(255, 255, 187, 0),),),
         centerTitle: true,
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed, //define que a BottomnavigationBar pode ter mais do que 3 itens
-        fixedColor: const Color.fromARGB(255, 255, 255, 255),
-        unselectedItemColor: const Color.fromARGB(255, 182, 26, 187),
-        backgroundColor: const Color.fromARGB(255, 66, 6, 90),
-        currentIndex: _opcaoSelecionada,
-        onTap: (opcao){
-          setState(() {
-            _opcaoSelecionada = opcao;
-          }); //define o estado da BottomNavigationBar de acordo com a opção que foi selecionada
-        },
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home_rounded),
-            label: 'Home',),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.sports_esports),
-            label: 'Sobre o jogo'),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.sports_motorsports),
-            label: 'Personagens'),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.image_rounded),
-            label: 'Cenários'),
-        ], 
+      bottomNavigationBar: Stack(
+        children: [
+          Container( //container customizado para ser do tamanho da BottomNavigationBar e dar o efeito gradiente
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Color.fromARGB(255, 15, 66, 107),
+                  Color.fromARGB(255, 0, 20, 49),
+                ],
+              ),
+            ),
+            height: 60, //altura do container
+          ),
+          BottomNavigationBar(
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+            type: BottomNavigationBarType.fixed, //define que a BottomnavigationBar pode ter mais do que 3 itens
+            fixedColor: const Color.fromARGB(255, 255, 187, 0),
+            unselectedItemColor: const Color.fromARGB(255, 163, 119, 23),
+            currentIndex: _opcaoSelecionada,
+            onTap: (opcao){
+              setState(() {
+                _opcaoSelecionada = opcao;
+              }); //define o estado da BottomNavigationBar de acordo com a opção que foi selecionada
+            },
+            items: const [ //itens da BottomNavigationBar
+              BottomNavigationBarItem(
+                icon: Icon(Icons.home_rounded),
+                label: 'Home',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.sports_esports),
+                label: 'Sobre o jogo'
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.brush_rounded),
+                label: 'Arte'
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.sports_motorsports),
+                label: 'Personagens'
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.image_rounded),
+                label: 'Cenários'
+              ),
+            ], 
+          ),
+        ]
       ),
-      body: IndexedStack(
+      body: IndexedStack( //função que faz a mudança de tela usando o index
         index: _opcaoSelecionada,
         children: const <Widget>[
           HomePag(),
           GamePag(),
+          ArtePag(),
           CarSelectPag(),
           CenarioPag(),
         ],
-      ) //função que faz a mudança de tela usando o index
+      )
     )
     );
   }

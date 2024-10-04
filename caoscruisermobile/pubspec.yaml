@@ -26,5 +26,10 @@ flutter:
   uses-material-design: true
   assets:
     - img/
-    - img/carros/
+    - img/carros/1/
+    - img/carros/2/
+    - img/carros/3/
+    - img/carros/4/
+    - img/carros/5/
+    - img/carros/6/
     - img/cenarios/

@@ -13,8 +13,9 @@ class CenarioPag extends StatelessWidget{
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
               colors: [
-                Color.fromARGB(255, 26, 26, 26),
-                Color.fromARGB(193, 81, 81, 81),
+                Color.fromARGB(255, 82, 0, 102),
+                Color.fromARGB(255, 90, 0, 126),
+                Color.fromARGB(255, 119, 0, 143),
               ],
             )
           ),

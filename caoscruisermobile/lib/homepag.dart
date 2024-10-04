@@ -13,9 +13,9 @@ class HomePag extends StatelessWidget{
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
               colors: [
-                Color.fromARGB(255, 212, 0, 120),
-                Color.fromARGB(255, 255, 108, 17),
-                Color.fromARGB(255, 249, 200, 14),
+                Color.fromARGB(255, 82, 0, 102),
+                Color.fromARGB(255, 90, 0, 126),
+                Color.fromARGB(255, 119, 0, 143),
               ],
             )
           ),
