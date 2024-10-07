@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:caoscruisermobile/homepag.dart';
 import 'package:caoscruisermobile/gamepag.dart';
+import 'package:caoscruisermobile/historiapag.dart';
 import 'package:caoscruisermobile/artepag.dart';
 import 'package:caoscruisermobile/carselectpag.dart';
-import 'package:caoscruisermobile/cenariopag.dart';
+import 'package:caoscruisermobile/cenarioselectpag.dart';
 
 void main() {
   runApp(const MyApp());
@@ -77,6 +78,10 @@ class _MyApp extends State<MyApp> {
                 label: 'Sobre o jogo'
               ),
               BottomNavigationBarItem(
+                icon: Icon(Icons.auto_stories),
+                label: 'História'
+              ),
+              BottomNavigationBarItem(
                 icon: Icon(Icons.brush_rounded),
                 label: 'Arte'
               ),
@@ -97,9 +102,10 @@ class _MyApp extends State<MyApp> {
         children: const <Widget>[
           HomePag(),
           GamePag(),
+          HistoriaPag(),
           ArtePag(),
           CarSelectPag(),
-          CenarioPag(),
+          CenarioSelectPag(),
         ],
       )
     )

@@ -53,10 +53,12 @@ class _CarSelectPag extends State<CarSelectPag> {
                       return Card( 
                         child: ListTile(
                           leading: CircleAvatar(backgroundImage: AssetImage(carros[index].img),),
-                          title: Text(carros[index].nome),
-                          subtitle: Text(carros[index].nomepiloto.toString()),
-                          hoverColor: const Color.fromARGB(255, 53, 0, 102),
-                          selectedTileColor: const Color.fromARGB(255, 82, 0, 102),
+                          title: Text(carros[index].nome, style: const TextStyle(color: Color.fromARGB(255, 255, 187, 0)),),
+                          subtitle: Text(carros[index].nomepiloto.toString(), style: const TextStyle(color: Color.fromARGB(255, 163, 119, 23)),),
+                          hoverColor: const Color.fromARGB(255, 15, 66, 107),
+                          selectedTileColor: const Color.fromARGB(255, 53, 0, 102),
+                          contentPadding: const EdgeInsets.all(5),
+                          tileColor: const Color.fromARGB(255, 0, 20, 49),
                           onTap: () =>  Navigator.push(
                             context,
                             MaterialPageRoute(builder:
