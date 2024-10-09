@@ -1,13 +1,7 @@
 # AppCaosCruiser
 ## Sobre o Projeto
-Este projeto é a elaboração do protótipo e a implementação do aplicativo mobile do jogo "Caos Cruiser", onde irá conter informações sobre o jogo e sobre a empresa. <br>
-O aplicativo irá conter as seguintes abas:
-  - Home;
-  - Sobre o jogo;
-  - Personagens;
-  - Cenários.
-
-Neste projeto
+Este projeto conta elaboração e implementação da aplicação mobile de Caos Cruiser, jogo desenvolvido para o Trabalho de Conclusão de Curso (TCC) do curso técnico de Programação de Jogos Digitais. <br>
+Na Wiki irá ser detalhado o protótipo, os diagramas, todo o desenvolvimento da aplicação, entre outras informações sobre todo o aplicativo.
 
 ## Wiki
  - <a href="https://github.com/YosagiGames/AppCaosCruiser/wiki"> Home da Wiki </a>
