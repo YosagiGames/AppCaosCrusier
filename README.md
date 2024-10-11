@@ -19,4 +19,5 @@ Na Wiki irá ser detalhado o protótipo, os diagramas, todo o desenvolvimento da
 <a href="https://github.com/YosagiGames/AppCaosCruiser/wiki/Widgets"> Widgets </a>
 
 ## Links externos
+### Protótipo no Figma
 - <a href="https://www.figma.com/design/ijJD3BGB6cjX9yy0TPGd63/Caos-Cruiser-App?node-id=0-1&t=E48Jm21ChwONgqTl-1"> Link do Figma </a>
