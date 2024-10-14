@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 
-class ArtePag extends StatelessWidget{
+class ArtePag extends StatefulWidget{
   const ArtePag ({super.key,});
 
+  @override
+  State<ArtePag> createState() => _ArtePag();
+}
+
+class _ArtePag extends State<ArtePag> {
+  
   @override
   Widget build(BuildContext context){
     return Scaffold(
@@ -27,7 +33,7 @@ class ArtePag extends StatelessWidget{
                   height: 60,
                   child: Text('Arte'),
                 ),
-                Image.asset('name')
+                Image.asset('name'),
               ],
             )
           )

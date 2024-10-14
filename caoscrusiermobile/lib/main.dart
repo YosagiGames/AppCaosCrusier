@@ -18,7 +18,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyApp extends State<MyApp> {
-  int _opcaoSelecionada = 0; //define qual é a página da BottomNavigationBar
+  int _opcaoSelecionada = 0; // define qual é a página da BottomNavigationBar
 
   @override
   Widget build(BuildContext context) {
@@ -36,14 +36,14 @@ class _MyApp extends State<MyApp> {
               ]
             ),
           ),
-        ), //cor de fundo da AppBar
+        ), // cor de fundo da AppBar
         title: const Text('Caos Cruiser',
           style: TextStyle(color: Color.fromARGB(255, 255, 187, 0),),),
         centerTitle: true,
       ),
       bottomNavigationBar: Stack(
         children: [
-          Container( //container customizado para ser do tamanho da BottomNavigationBar e dar o efeito gradiente
+          Container( // container customizado para ser do tamanho da BottomNavigationBar e dar o efeito gradiente
             decoration: const BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
@@ -54,21 +54,21 @@ class _MyApp extends State<MyApp> {
                 ],
               ),
             ),
-            height: 60, //altura do container
+            height: 60, // altura do container/appbar
           ),
           BottomNavigationBar(
             backgroundColor: Colors.transparent,
             elevation: 0,
-            type: BottomNavigationBarType.fixed, //define que a BottomnavigationBar pode ter mais do que 3 itens
+            type: BottomNavigationBarType.fixed, // define que a BottomnavigationBar pode ter mais do que 3 itens
             fixedColor: const Color.fromARGB(255, 255, 187, 0),
             unselectedItemColor: const Color.fromARGB(255, 163, 119, 23),
             currentIndex: _opcaoSelecionada,
             onTap: (opcao){
               setState(() {
                 _opcaoSelecionada = opcao;
-              }); //define o estado da BottomNavigationBar de acordo com a opção que foi selecionada
+              }); // define o estado da BottomNavigationBar de acordo com a opção que foi selecionada
             },
-            items: const [ //itens da BottomNavigationBar
+            items: const [ // itens da BottomNavigationBar
               BottomNavigationBarItem(
                 icon: Icon(Icons.home_rounded),
                 label: 'Home',
@@ -97,7 +97,7 @@ class _MyApp extends State<MyApp> {
           ),
         ]
       ),
-      body: IndexedStack( //função que faz a mudança de tela usando o index
+      body: IndexedStack(
         index: _opcaoSelecionada,
         children: const <Widget>[
           HomePag(),
