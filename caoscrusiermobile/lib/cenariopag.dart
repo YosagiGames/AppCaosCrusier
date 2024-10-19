@@ -1,3 +1,4 @@
+import 'package:caoscruisermobile/cenario.dart';
 import 'package:flutter/material.dart';
 
 class CenarioPag extends StatelessWidget{
@@ -5,6 +6,9 @@ class CenarioPag extends StatelessWidget{
 
   @override
   Widget build(BuildContext context){
+
+    final cenario = ModalRoute.of(context)!.settings.arguments as Cenario;
+
   return Scaffold(
     body: Center(
       child: Container(
@@ -30,6 +34,7 @@ class CenarioPag extends StatelessWidget{
                 color: Color.fromARGB(255, 255, 255, 255)),
             ),
             Image.asset('img/cenario/scene_jp.png', width: 310, height: 200,),
+            Text(cenario.desafios[0])
           ],
         ),
       ),)

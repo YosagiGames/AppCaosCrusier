@@ -1,11 +1,13 @@
 class Cenario {
   final String nome;
-  final String img;
+  final List<String> img;
   final String nomeReal;
+  final List<String> desafios;
 
-  Cenario(
-    this.nome,
-    this.img,
-    this.nomeReal
-  );
+  Cenario({
+    required this.nome,
+    required this.img,
+    required this.nomeReal,
+    required this.desafios
+  });
 }

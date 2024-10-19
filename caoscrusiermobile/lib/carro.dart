@@ -1,13 +1,13 @@
 class Carro {
   final String nome;
-  final String img;
+  final List<String> img;
   final String nomepiloto;
   final String habilidade;
 
-  Carro(
-    this.nome,
-    this.img,
-    this.nomepiloto,
-    this.habilidade
-  );
+  Carro({
+    required this.nome,
+    required this.img,
+    required this.nomepiloto,
+    required this.habilidade
+  });
 }

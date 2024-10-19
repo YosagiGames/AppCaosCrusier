@@ -12,12 +12,54 @@ class CarSelectPag extends StatefulWidget{
 class _CarSelectPag extends State<CarSelectPag> {
 
   List<Carro> carros = [
-    Carro('Apophis', 'img/carros/1/car01.jpeg', 'piloto', 'habilidade'),
-    Carro('Caçador', 'img/carros/2/car01.jpeg', 'piloto', 'habilidade'),
-    Carro('E.V.A.', 'img/carros/3/car01.jpeg', 'piloto', 'habilidade'),
-    Carro('Mercúrio', 'img/carros/4/car01.jpeg', 'piloto', 'habilidade'),
-    Carro('Raptor', 'img/carros/5/car01.jpeg', 'piloto', 'habilidade'),
-    Carro('Ultravioleta', 'img/carros/6/car01.jpeg', 'piloto', 'habilidade'),
+    Carro(
+      nome: 'Apophis',
+      img: [
+        'img/carros/1/car01.jpeg'
+      ],
+      nomepiloto: 'piloto',
+      habilidade: 'habilidade'
+    ),
+    Carro(
+      nome: 'Caçador', 
+      img: [
+        'img/carros/2/car01.jpeg'
+      ], 
+      nomepiloto: 'piloto', 
+      habilidade: 'habilidade'
+    ),
+    Carro(
+      nome: 'E.V.A.', 
+      img: [
+        'img/carros/3/car01.jpeg'
+      ], 
+      nomepiloto: 'piloto', 
+      habilidade: 'habilidade'
+    ),
+    Carro(
+      nome: 'Mercúrio', 
+      img: [
+        'img/carros/4/car01.jpeg'
+      ], 
+      nomepiloto: 'piloto', 
+      habilidade: 'habilidade'
+    ),
+    Carro(
+      nome: 'Raptor',
+      img: [
+        'img/carros/5/car01.jpeg'
+      ], 
+      nomepiloto: 'piloto', 
+      habilidade: 'habilidade'
+    ),
+    Carro(
+      nome: 'Ultravioleta', 
+      img: [
+        'img/carros/6/car01.jpeg'
+      ], 
+      nomepiloto: 'piloto', 
+      habilidade: 'habilidade'
+    ),
   ];
 
   final ScrollController _controller = ScrollController();
@@ -52,7 +94,7 @@ class _CarSelectPag extends State<CarSelectPag> {
                     itemBuilder: (BuildContext ctx, index){
                       return Card( 
                         child: ListTile(
-                          leading: CircleAvatar(backgroundImage: AssetImage(carros[index].img),),
+                          leading: CircleAvatar(backgroundImage: AssetImage(carros[index].img[0]),),
                           title: Text(carros[index].nome, style: const TextStyle(color: Color.fromARGB(255, 255, 187, 0)),),
                           subtitle: Text(carros[index].nomepiloto.toString(), style: const TextStyle(color: Color.fromARGB(255, 163, 119, 23)),),
                           hoverColor: const Color.fromARGB(255, 15, 66, 107),

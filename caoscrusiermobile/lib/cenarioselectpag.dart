@@ -12,11 +12,61 @@ class CenarioSelectPag extends StatefulWidget{
 class _CenarioSelectPag extends State<CenarioSelectPag> {
 
   List<Cenario> cenarios = [
-    Cenario('Fujikawa', 'img/carros/1/car01.jpeg', 'Japão'),
-    Cenario('Guarapári', 'img/carros/2/car01.jpeg', 'Brasil'),
-    Cenario('Harimo', 'img/carros/3/car01.jpeg', 'Egito'),
-    Cenario('Melbourne', 'img/carros/4/car01.jpeg', 'Austrália'),
-    Cenario('Neo Londres', 'img/carros/5/car01.jpeg', 'Reino Unido'),
+    Cenario(
+      nome: 'Fujikawa', 
+      img: [
+        'img/carros/1/car01.jpeg'
+      ], 
+      nomeReal: 'Japão',
+      desafios: [
+        '1',
+        '2'
+      ]
+    ),
+    Cenario(
+      nome: 'Guarapári', 
+      img: [
+        'img/carros/2/car01.jpeg'
+      ], 
+      nomeReal: 'Brasil',
+      desafios: [
+        '1',
+        '2'
+      ]
+    ),
+    Cenario(
+      nome: 'Harimo', 
+      img: [
+        'img/carros/3/car01.jpeg'
+      ], 
+      nomeReal: 'Egito',
+      desafios: [
+        '1',
+        '2'
+      ]
+    ),
+    Cenario(
+      nome: 'Melbourne', 
+      img: [
+        'img/carros/4/car01.jpeg'
+      ], 
+      nomeReal: 'Austrália',
+      desafios: [
+        '1',
+        '2'
+      ]
+    ),
+    Cenario(
+      nome: 'Neo Londres', 
+      img: [
+        'img/carros/5/car01.jpeg'
+      ], 
+      nomeReal: 'Reino Unido',
+      desafios: [
+        '1',
+        '2'
+      ]
+    ),
   ];
 
   final ScrollController _controller = ScrollController();
@@ -42,7 +92,7 @@ class _CenarioSelectPag extends State<CenarioSelectPag> {
               children: [
                 Expanded(
                   child:ListView.builder(
-                    itemCount: 6,
+                    itemCount: 5,
                     shrinkWrap: true,
                     padding: const EdgeInsets.all(5),
                     scrollDirection: Axis.vertical,
@@ -51,7 +101,7 @@ class _CenarioSelectPag extends State<CenarioSelectPag> {
                     itemBuilder: (BuildContext ctx, index){
                       return Card( 
                         child: ListTile(
-                          leading: CircleAvatar(backgroundImage: AssetImage(cenarios[index].img),),
+                          leading: CircleAvatar(backgroundImage: AssetImage(cenarios[index].img[0]),),
                           title: Text(cenarios[index].nome, style: const TextStyle(color: Color.fromARGB(255, 255, 187, 0)),),
                           subtitle: Text(cenarios[index].nomeReal.toString(), style: const TextStyle(color: Color.fromARGB(255, 163, 119, 23)),),
                           hoverColor: const Color.fromARGB(255, 15, 66, 107),
