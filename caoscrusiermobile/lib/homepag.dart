@@ -46,10 +46,10 @@ class HomePag extends StatelessWidget{
                   ),
                 ),
               ]
+            ),
           ),
         ),
-      ),
-  )
-  );
-}
+      )
+    );
+  }
 }

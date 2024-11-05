@@ -1,13 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:caoscruisermobile/homepag.dart';
-import 'package:caoscruisermobile/gamepag.dart';
-import 'package:caoscruisermobile/historiapag.dart';
 import 'package:caoscruisermobile/artepag.dart';
 import 'package:caoscruisermobile/carselectpag.dart';
 import 'package:caoscruisermobile/cenarioselectpag.dart';
 
 void main() {
   runApp(const MyApp());
+}
+
+class Main {
+  final List<String> textos;
+  final List<IconData> icons;
+
+  Main ({
+    required this.textos,
+    required this.icons
+  });
 }
 
 class MyApp extends StatefulWidget {
@@ -19,6 +27,21 @@ class MyApp extends StatefulWidget {
 
 class _MyApp extends State<MyApp> {
   int _opcaoSelecionada = 0; // define qual é a página da BottomNavigationBar
+
+  final Main main = Main (
+    textos: [
+      'Home',
+      'Arte',
+      'Carros',
+      'Cenários'
+    ],
+    icons: [
+      Icons.home_rounded,
+      Icons.palette_outlined,
+      Icons.sports_motorsports,
+      Icons.image_outlined
+    ]
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -56,60 +79,50 @@ class _MyApp extends State<MyApp> {
               ),
             ),
             height: 60, // altura do container/appbar
-          ),
-          BottomNavigationBar(
-            backgroundColor: Colors.transparent,
-            elevation: 0,
-            type: BottomNavigationBarType.fixed, // define que a BottomnavigationBar pode ter mais do que 3 itens
-            fixedColor: const Color.fromARGB(255, 255, 187, 0),
-            unselectedItemColor: const Color.fromARGB(255, 163, 119, 23),
-            currentIndex: _opcaoSelecionada,
-            onTap: (opcao){
-              setState(() {
-                _opcaoSelecionada = opcao;
-              }); // define o estado da BottomNavigationBar de acordo com a opção que foi selecionada
-            },
-            items: const [ // itens da BottomNavigationBar
-              BottomNavigationBarItem(
-                icon: Icon(Icons.home_rounded),
-                label: 'Home',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.sports_esports),
-                label: 'Sobre o jogo'
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.auto_stories),
-                label: 'História'
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.brush_rounded),
-                label: 'Arte'
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.sports_motorsports),
-                label: 'Personagens'
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.image_rounded),
-                label: 'Cenários'
-              ),
-            ], 
-          ),
-        ]
-      ),
-      body: IndexedStack(
-        index: _opcaoSelecionada,
-        children: const <Widget>[
-          HomePag(),
-          GamePag(),
-          HistoriaPag(),
-          ArtePag(),
-          CarSelectPag(),
-          CenarioSelectPag(),
-        ],
+            ),
+            BottomNavigationBar(
+              backgroundColor: Colors.transparent,
+              elevation: 0,
+              type: BottomNavigationBarType.fixed, // define que a BottomnavigationBar pode ter mais do que 3 itens
+              fixedColor: const Color.fromARGB(255, 255, 187, 0),
+              unselectedItemColor: const Color.fromARGB(255, 163, 119, 23),
+              currentIndex: _opcaoSelecionada,
+              onTap: (opcao){
+                setState(() {
+                  _opcaoSelecionada = opcao;
+                }); // define o estado da BottomNavigationBar de acordo com a opção que foi selecionada
+              },
+              items: [ // itens da BottomNavigationBar
+                BottomNavigationBarItem(
+                  icon: Icon(main.icons[0]),
+                  label: main.textos[0],
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(main.icons[1]),
+                  label: main.textos[1]
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(main.icons[2]),
+                  label: main.textos[2]
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(main.icons[3]),
+                  label: main.textos[3]
+                ),
+              ], 
+            ),
+          ]
+        ),
+        body: IndexedStack(
+          index: _opcaoSelecionada,
+          children: const <Widget>[
+            HomePag(),
+            ArtePag(),
+            CarSelectPag(),
+            CenarioSelectPag()
+          ]
+        )
       )
-    )
     );
   }
 }
