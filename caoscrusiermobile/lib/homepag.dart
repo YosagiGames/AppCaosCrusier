@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 
-class HomePag extends StatelessWidget{
-  const HomePag ({super.key,});
+class HomePag extends StatefulWidget {
+  const HomePag({super.key,});
 
   @override
+  State<HomePag> createState() => _HomePag();
+}
+
+class _HomePag extends State<HomePag> {
+  @override
   Widget build(BuildContext context){
-  return Scaffold(
-    body: Center(
+    return Scaffold(
+      body: Center(
         child: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
@@ -20,6 +25,8 @@ class HomePag extends StatelessWidget{
             )
           ),
           child: Center(
+            child: Container(
+              decoration: const BoxDecoration(),
             child: Column(
               children: [
                 Image.asset('img/capa.png', width: 310, height: 200,),
@@ -43,12 +50,13 @@ class HomePag extends StatelessWidget{
                       fontFamily: 'ABeeZee',
                       fontSize: 15,
                       color: Colors.white,),
+                    ),
                   ),
-                ),
-              ]
+                ]
+              ),
             ),
           ),
-        ),
+        )
       )
     );
   }
