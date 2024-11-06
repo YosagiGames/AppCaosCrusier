@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:caoscruisermobile/jogo.dart';
+//import 'package:caoscruisermobile/jogo.dart';
 import 'package:caoscruisermobile/homepag.dart';
 import 'package:caoscruisermobile/artepag.dart';
 import 'package:caoscruisermobile/carselectpag.dart';
@@ -29,31 +29,7 @@ class MyApp extends StatefulWidget {
 class _MyApp extends State<MyApp> {
   int opcaoSelecionada = 0; // define qual é a página da BottomNavigationBar
   
-  final Jogo caosCrusier = const Jogo (
-    textosPag: [
-      'Home',
-      'Sobre o Jogo',
-      'Arte',
-      'Carros',
-      'Cenários',
-      'Nossa Inspiração'
-    ],
-    titulo: 'Caos Crusier',
-    capa: 'img/capa.png',
-    sinopse: 'Caos Crusier é um jogo de corrida',
-    caracteristicas: 'lalala',
-    objetivo: 'o objetivo do jogo',
-    tematica: 'O tema do jogo',
-    motivoJogo: 'estamos fazendo Caos Crusier',
-    icons: [
-      Icons.home,
-      Icons.sports_esports,
-      Icons.brush_rounded,
-      Icons.sports_motorsports_rounded,
-      Icons.image,
-      Icons.arrow_back_ios
-    ]
-  );
+  
 
   navegacao(Widget pagina) {
     Navigator.push(
@@ -69,7 +45,8 @@ class _MyApp extends State<MyApp> {
       'Home',
       'Arte',
       'Carros',
-      'Cenários'
+      'Cenários',
+      'CAOS CRUSIER'
     ],
     icons: [
       Icons.home_rounded,
@@ -91,13 +68,13 @@ class _MyApp extends State<MyApp> {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: <Color>[
-                  Color.fromARGB(255, 0, 20, 49), 
-                  Color.fromARGB(255, 15, 66, 107)
+                  Color.fromARGB(255, 26, 0, 39), 
+                  Color.fromARGB(255, 125, 0, 132)
                 ]
               ),
             ),
           ), // cor de fundo da AppBar
-          title: construirTitulo(title: caosCrusier.titulo),
+          title: construirTitulo(title: main.textos[4]),
           centerTitle: true,
         ),
         bottomNavigationBar: Stack(
@@ -108,8 +85,8 @@ class _MyApp extends State<MyApp> {
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
-                    Color.fromARGB(255, 15, 66, 107),
-                    Color.fromARGB(255, 0, 20, 49),
+                    Color.fromARGB(240, 38, 2, 79),
+                    Color.fromARGB(240, 125, 0, 132),
                   ],
                 ),
               ),
