@@ -40,22 +40,6 @@ class _MyApp extends State<MyApp> {
     );
   }
 
-  final Main main = Main (
-    textos: [
-      'Home',
-      'Arte',
-      'Carros',
-      'Cenários',
-      'CAOS CRUSIER'
-    ],
-    icons: [
-      Icons.home_rounded,
-      Icons.palette_outlined,
-      Icons.sports_motorsports,
-      Icons.image_outlined
-    ]
-  );
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -74,7 +58,7 @@ class _MyApp extends State<MyApp> {
               ),
             ),
           ), // cor de fundo da AppBar
-          title: construirTitulo(title: main.textos[4]),
+          title: const Text('CAOS CRUSIER', style: TextStyle(color: Color.fromARGB(255, 255, 187, 0),),),
           centerTitle: true,
         ),
         bottomNavigationBar: Stack(
@@ -104,25 +88,26 @@ class _MyApp extends State<MyApp> {
                   opcaoSelecionada = opcao;
                 }); // define o estado da BottomNavigationBar de acordo com a opção que foi selecionada
               },
-              items: [ // itens da BottomNavigationBar
+              items: const [ // itens da BottomNavigationBar
                 BottomNavigationBarItem(
-                  icon: Icon(main.icons[0]),
-                  label: main.textos[0],
+                  icon: Icon(Icons.home),
+                  label: 'Home',
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(main.icons[1]),
-                  label: main.textos[1]
+                  icon: Icon(Icons.palette_outlined),
+                  label: 'Arte',
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(main.icons[2]),
-                  label: main.textos[2]
+                  icon: Icon(Icons.sports_motorsports),
+                  label: 'Carros',
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(main.icons[3]),
-                  label: main.textos[3]
+                  icon: Icon(Icons.image_outlined),
+                  label: 'Cenários',
                 ),
-              ],             ),
-          ]
+              ],
+            ),
+          ],
         ),
         body: IndexedStack(
           index: opcaoSelecionada,
@@ -135,11 +120,5 @@ class _MyApp extends State<MyApp> {
         )
       )
     );
-  }
-
-  Widget construirTitulo({
-    required String title
-  }) {
-    return Text(title, style: const TextStyle(color: Color.fromARGB(255, 255, 187, 0),),);
   }
 }
