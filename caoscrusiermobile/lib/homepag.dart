@@ -67,6 +67,8 @@ class _HomePag extends State<HomePag> {
           ),
           child: Align(
             child: Container(
+              margin: const EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(16.0),
               decoration: const BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(45)),
                 gradient: LinearGradient(

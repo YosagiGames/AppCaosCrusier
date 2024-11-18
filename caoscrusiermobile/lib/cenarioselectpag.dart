@@ -1,6 +1,7 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide CarouselController;
 import 'package:caoscruisermobile/cenario.dart';
 import 'package:caoscruisermobile/cenariopag.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 class CenarioSelectPag extends StatefulWidget{
   const CenarioSelectPag ({super.key,});
@@ -69,7 +70,20 @@ class _CenarioSelectPag extends State<CenarioSelectPag> {
     ),
   ];
 
-  final ScrollController _controller = ScrollController();
+  //final ScrollController _controller = ScrollController();
+  int index = 0;
+
+  navegacao(){
+    Navigator.push(
+      context, 
+      MaterialPageRoute(
+        builder: (context) => const CenarioPag(),
+        settings: RouteSettings(
+          arguments: cenarios[index]
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context){
@@ -90,7 +104,71 @@ class _CenarioSelectPag extends State<CenarioSelectPag> {
           child: Center(
             child: Column(
               children: [
-                Expanded(
+                CarouselSlider(
+                  options: CarouselOptions(
+                    autoPlay: true,
+                    autoPlayAnimationDuration: const Duration(seconds: 3),
+                    autoPlayInterval: const Duration(seconds: 10),
+                    onPageChanged: (currentIndex, reason) {
+                      setState((){
+                        index = currentIndex;
+                      });
+                    },
+                  ),
+                  items: [
+                    Container(
+                      color: const Color.fromARGB(255, 0, 20, 49),
+                      padding: const EdgeInsets.all(20.0),
+                      margin: const EdgeInsets.all(20.0),
+                      child: IconButton(
+                        onPressed: () => navegacao(), 
+                        icon: Image.asset(cenarios[0].img[0]),
+                        tooltip: cenarios[0].nome,
+                      ),
+                    ),
+                    Container(
+                      color: const Color.fromARGB(255, 0, 20, 49),
+                      padding: const EdgeInsets.all(20.0),
+                      margin: const EdgeInsets.all(20.0),
+                      child: IconButton(
+                        onPressed: () => navegacao(), 
+                        icon: Image.asset(cenarios[1].img[0]),
+                        tooltip: cenarios[1].nome,
+                      ),
+                    ),
+                    Container(
+                      color: const Color.fromARGB(255, 0, 20, 49),
+                      padding: const EdgeInsets.all(20.0),
+                      margin: const EdgeInsets.all(20.0),
+                      child: IconButton(
+                        onPressed: () => navegacao(), 
+                        icon: Image.asset(cenarios[2].img[0]),
+                        tooltip: cenarios[2].nome,
+                      ),
+                    ),
+                    Container(
+                      color: const Color.fromARGB(255, 0, 20, 49),
+                      padding: const EdgeInsets.all(20.0),
+                      margin: const EdgeInsets.all(20.0),
+                      child: IconButton(
+                        onPressed: () => navegacao(), 
+                        icon: Image.asset(cenarios[3].img[0]),
+                        tooltip: cenarios[3].nome,
+                      ),
+                    ),
+                    Container(
+                      color: const Color.fromARGB(255, 0, 20, 49),
+                      padding: const EdgeInsets.all(20.0),
+                      margin: const EdgeInsets.all(20.0),
+                      child: IconButton(
+                        onPressed: () => navegacao(), 
+                        icon: Image.asset(cenarios[4].img[0]),
+                        tooltip: cenarios[4].nome,
+                      ),
+                    ),
+                  ],
+                ),
+                /*Expanded(
                   child:ListView.builder(
                     itemCount: 5,
                     shrinkWrap: true,
@@ -118,7 +196,7 @@ class _CenarioSelectPag extends State<CenarioSelectPag> {
                         ),
                       );
                   },)
-                )
+                ),*/
               ]
             )
           )
