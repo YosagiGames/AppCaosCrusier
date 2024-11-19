@@ -27,9 +27,8 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyApp extends State<MyApp> {
+  
   int opcaoSelecionada = 0; // define qual é a página da BottomNavigationBar
-  
-  
 
   navegacao(Widget pagina) {
     Navigator.push(

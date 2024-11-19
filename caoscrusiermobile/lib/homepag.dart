@@ -78,51 +78,53 @@ class _HomePag extends State<HomePag> {
                     Color.fromARGB(255, 88, 0, 123),
                     Color.fromARGB(255, 57, 0, 71),
                   ],
-                )
+                ),
               ),
-              child: Column(
-                children: [
-                  const SizedBox(
-                    width: 450,
-                  ),
-                  Image.asset('img/capa.png', width: 400, height: 380,),
-                  SizedBox(
-                    width: 380,
-                    child: Text(
-                      caosCrusier.sinopse,
-                      textAlign: TextAlign.justify,
-                      style: const TextStyle(
-                        fontFamily: 'ABeeZee',
-                        fontSize: 15,
-                        color: Colors.white,
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    const SizedBox(
+                      width: 450,
+                    ),
+                    Image.asset('img/capa.png', width: 400, height: 380,),
+                    SizedBox(
+                      width: 380,
+                      child: Text(
+                        caosCrusier.sinopse,
+                        textAlign: TextAlign.justify,
+                        style: const TextStyle(
+                          fontFamily: 'ABeeZee',
+                          fontSize: 15,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
-                  ),
-                  const Padding(padding: EdgeInsets.all(10)),
-                  SizedBox(
-                    height: 35,
-                    child: ElevatedButton(
-                      onPressed: () => navegacao(const GamePag()),
-                      style: const ButtonStyle(
-                        backgroundColor: WidgetStatePropertyAll(Color.fromARGB(255, 255, 187, 0))
+                    const Padding(padding: EdgeInsets.all(10)),
+                    SizedBox(
+                      height: 35,
+                      child: ElevatedButton(
+                        onPressed: () => navegacao(const GamePag()),
+                        style: const ButtonStyle(
+                          backgroundColor: WidgetStatePropertyAll(Color.fromARGB(255, 255, 187, 0))
+                        ),
+                        child: construirTitulo(title: caosCrusier.textosPag[1])
                       ),
-                      child: construirTitulo(title: caosCrusier.textosPag[1])
                     ),
-                  ),
-                  const Padding(padding: EdgeInsets.all(5)),
-                  SizedBox(
-                    height: 35,
-                    child: ElevatedButton(
-                      onPressed: () => navegacao(const InspoPag()),
-                      style: const ButtonStyle(backgroundColor: WidgetStatePropertyAll(Color.fromARGB(255, 255, 187, 0))),
-                      child: construirTitulo(title: caosCrusier.textosPag[5])
+                    const Padding(padding: EdgeInsets.all(5)),
+                    SizedBox(
+                      height: 35,
+                      child: ElevatedButton(
+                        onPressed: () => navegacao(const InspoPag()),
+                        style: const ButtonStyle(backgroundColor: WidgetStatePropertyAll(Color.fromARGB(255, 255, 187, 0))),
+                        child: construirTitulo(title: caosCrusier.textosPag[5])
+                      ),
                     ),
-                  ),
-                ]
+                  ]
+                ),
               ),
             ),
           ),
-        )
+        ),
       ),
     );
   }

@@ -168,35 +168,6 @@ class _CenarioSelectPag extends State<CenarioSelectPag> {
                     ),
                   ],
                 ),
-                /*Expanded(
-                  child:ListView.builder(
-                    itemCount: 5,
-                    shrinkWrap: true,
-                    padding: const EdgeInsets.all(5),
-                    scrollDirection: Axis.vertical,
-                    controller: _controller,
-                    clipBehavior: Clip.antiAlias,
-                    itemBuilder: (BuildContext ctx, index){
-                      return Card( 
-                        child: ListTile(
-                          leading: CircleAvatar(backgroundImage: AssetImage(cenarios[index].img[0]),),
-                          title: Text(cenarios[index].nome, style: const TextStyle(color: Color.fromARGB(255, 255, 187, 0)),),
-                          subtitle: Text(cenarios[index].nomeReal.toString(), style: const TextStyle(color: Color.fromARGB(255, 163, 119, 23)),),
-                          hoverColor: const Color.fromARGB(255, 15, 66, 107),
-                          selectedTileColor: const Color.fromARGB(255, 53, 0, 102),
-                          contentPadding: const EdgeInsets.all(5),
-                          tileColor: const Color.fromARGB(255, 0, 20, 49),
-                          onTap: () =>  Navigator.push(
-                            context,
-                            MaterialPageRoute(builder:
-                              (context) => const CenarioPag(),
-                              settings: RouteSettings(
-                              arguments:cenarios[index],
-                            ),),),
-                        ),
-                      );
-                  },)
-                ),*/
               ]
             )
           )
