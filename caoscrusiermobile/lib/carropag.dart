@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:caoscruisermobile/classes/carro.dart';
-//import 'package:caoscruisermobile/carselectpag.dart';
+import 'package:caoscruisermobile/classes/piloto.dart';
 
 class CarroPag extends StatefulWidget{
   const CarroPag ({super.key,});
@@ -11,27 +11,53 @@ class CarroPag extends StatefulWidget{
 
 class _CarroPag extends State<CarroPag> {
 
+  List<Piloto> pilotos = [
+    Piloto(
+      nomePiloto: 'Piloto Apophis',
+      imgPiloto: 'imgPiloto',
+      nacionalidade: 'a',
+      historia: 'pipipi',
+      fim: 'popopo',
+    ),
+    Piloto(
+      nomePiloto: 'Piloto Caçador',
+      imgPiloto: 'imgPiloto',
+      nacionalidade: 'b',
+      historia: 'pipipi',
+      fim: 'popopo',
+    ),
+    Piloto(
+      nomePiloto: 'Piloto E.V.A.',
+      imgPiloto: 'imgPiloto',
+      nacionalidade: 'c',
+      historia: 'pipipi',
+      fim: 'popopo',
+    ),
+    Piloto(
+      nomePiloto: 'Piloto Mercúrio',
+      imgPiloto: 'imgPiloto',
+      nacionalidade: 'd',
+      historia: 'pipipi',
+      fim: 'popopo',
+    ),
+    Piloto(
+      nomePiloto: 'Piloto Raptor',
+      imgPiloto: 'imgPiloto',
+      nacionalidade: 'e',
+      historia: 'pipipi',
+      fim: 'popopo',
+    ),
+    Piloto(
+      nomePiloto: 'Piloto Ultravioleta',
+      imgPiloto: 'imgPiloto',
+      nacionalidade: 'f',
+      historia: 'pipipi',
+      fim: 'popopo',
+    ),
+  ];
+
   int i = 0;
   int p = 1;
-  
-
-  avancar(){
-    setState(() {
-      i = i + 1;
-    });
-    if(i >= 5){
-      i = 0;
-    }
-  }
-
-  voltar(){
-    setState(() {
-      i = i - 1;
-    });
-    if(i <= -1){
-      i = 4;
-    }
-  }
 
   @override
   Widget build(BuildContext context){
@@ -40,29 +66,40 @@ class _CarroPag extends State<CarroPag> {
 
     if (carro.nomeCarro == 'Apophis') {
       p;
+      setState(() {
+        i = 0;
+      });
     }
     else if (carro.nomeCarro == 'Caçador'){
       p = 2;
+      setState(() {
+        i = 1;
+      });
     }
     else if (carro.nomeCarro == 'E.V.A.'){
       p = 3;
+      setState(() {
+        i = 2;
+      });
     }
     else if (carro.nomeCarro == 'Mercúrio'){
       p = 4;
+      setState(() {
+        i = 3;
+      });
     }
     else if (carro.nomeCarro == 'Raptor'){
       p = 5;
+      setState(() {
+        i = 4;
+      });
     }
     else if (carro.nomeCarro == 'Ultravioleta'){
       p = 6;
+      setState(() {
+        i = 5;
+      });
     }
-
-    List<String> imagens = [
-      'img/carros/$p/car01.jpeg',
-      'img/carros/$p/car02.jpeg',
-      'img/carros/$p/car03.jpeg',
-      'img/carros/$p/car04.jpeg',
-    ];
     
     return Scaffold(
       appBar: AppBar(
@@ -103,25 +140,9 @@ class _CarroPag extends State<CarroPag> {
             child: Column(
               children: [
                 Text(carro.nomeCarro, style: const TextStyle(color: Colors.white),),
-                Image.asset(imagens[i]),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    ElevatedButton(onPressed: (){
-                      voltar();
-                    }, 
-                      child: const Icon(Icons.arrow_back_ios, color: Color.fromARGB(255, 0, 20, 49)),
-                    ),
-                    ElevatedButton(
-                      onPressed:(){
-                        avancar();
-                      },
-                      child: const Icon(Icons.arrow_forward_ios, color: Color.fromARGB(255, 0, 20, 49))
-                    ),
-                    const Padding(padding: EdgeInsets.all(2),),
-                  ],
-                ),
+                Image.asset(carro.img[0]),
                 Text(carro.habilidade, style: const TextStyle(color: Colors.white),),
+                Text(pilotos[i].nomePiloto),
               ],
             ),
           ),
