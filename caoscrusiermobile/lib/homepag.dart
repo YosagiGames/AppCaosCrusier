@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:caoscruisermobile/classes/jogo.dart';
 import 'package:caoscruisermobile/inspopag.dart';
 import 'package:caoscruisermobile/gamepag.dart';
+import 'package:caoscruisermobile/devspag.dart';
 
 class HomePag extends StatefulWidget {
   const HomePag({super.key,});
@@ -53,6 +54,40 @@ class _HomePag extends State<HomePag> {
   @override
   Widget build(BuildContext context){
     return Scaffold(
+        appBar: AppBar(
+          flexibleSpace: Container(
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: <Color>[
+                  Color.fromARGB(255, 26, 0, 39), 
+                  Color.fromARGB(255, 125, 0, 132)
+                ]
+              ),
+            ),
+          ), // cor de fundo da AppBar
+          title: const Text(
+            'CAOS CRUSIER',
+            style: TextStyle(
+              fontFamily: 'MonsterRacing',
+              color: Color.fromARGB(255, 255, 187, 0),
+            ),
+          ),
+          centerTitle: true,
+          leading: IconButton(
+            onPressed: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const DevsPag()
+              )
+            ),
+            icon: Icon(Icons.person),
+            style: ButtonStyle(
+              iconColor: WidgetStatePropertyAll(Color.fromARGB(255, 255, 187, 0),)
+            ),
+          ),
+        ),
       body: Center(
         child: Container(
           decoration: const BoxDecoration(

@@ -43,28 +43,6 @@ class _MyApp extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(
-          flexibleSpace: Container(
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: <Color>[
-                  Color.fromARGB(255, 26, 0, 39), 
-                  Color.fromARGB(255, 125, 0, 132)
-                ]
-              ),
-            ),
-          ), // cor de fundo da AppBar
-          title: const Text(
-            'CAOS CRUSIER',
-            style: TextStyle(
-              fontFamily: 'MonsterRacing',
-              color: Color.fromARGB(255, 255, 187, 0),
-            ),
-          ),
-          centerTitle: true,
-        ),
         bottomNavigationBar: Stack(
           children: [
             Container( // container customizado para ser do tamanho da BottomNavigationBar e dar o efeito gradiente
