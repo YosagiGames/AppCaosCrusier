@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:caoscruisermobile/jogo.dart';
+import 'package:caoscruisermobile/classes/jogo.dart';
 
 class InspoPag extends StatefulWidget {
   const InspoPag({super.key,});

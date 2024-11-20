@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 //import 'package:caoscruisermobile/jogo.dart';
 import 'package:caoscruisermobile/homepag.dart';
 import 'package:caoscruisermobile/artepag.dart';
-import 'package:caoscruisermobile/carselectpag.dart';
-import 'package:caoscruisermobile/cenarioselectpag.dart';
+import 'package:caoscruisermobile/car_e_cenpag.dart';
 
 void main() {
   runApp(const MyApp());
@@ -57,7 +56,13 @@ class _MyApp extends State<MyApp> {
               ),
             ),
           ), // cor de fundo da AppBar
-          title: const Text('CAOS CRUSIER', style: TextStyle(color: Color.fromARGB(255, 255, 187, 0),),),
+          title: const Text(
+            'CAOS CRUSIER',
+            style: TextStyle(
+              fontFamily: 'MonsterRacing',
+              color: Color.fromARGB(255, 255, 187, 0),
+            ),
+          ),
           centerTitle: true,
         ),
         bottomNavigationBar: Stack(
@@ -98,11 +103,7 @@ class _MyApp extends State<MyApp> {
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(Icons.sports_motorsports),
-                  label: 'Carros',
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(Icons.image_outlined),
-                  label: 'Cenários',
+                  label: 'Carros e Cenários',
                 ),
               ],
             ),
@@ -113,8 +114,7 @@ class _MyApp extends State<MyApp> {
           children: const <Widget>[
             HomePag(),
             ArtePag(),
-            CarSelectPag(),
-            CenarioSelectPag(),
+            CarCenPag(),
           ],
         )
       )

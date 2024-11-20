@@ -1,125 +1,196 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:caoscruisermobile/carro.dart';
-import 'package:caoscruisermobile/cenario.dart';
+import 'package:caoscruisermobile/classes/carro.dart';
+import 'package:caoscruisermobile/classes/cenario.dart';
 import 'package:caoscruisermobile/carropag.dart';
 import 'package:caoscruisermobile/cenariopag.dart';
 
-class CarSelectPag extends StatefulWidget{
-  const CarSelectPag ({super.key,});
+class CarCenPag extends StatefulWidget{
+  const CarCenPag ({super.key,});
 
   @override
-  State<CarSelectPag> createState() => _CarSelectPag();
+  State<CarCenPag> createState() => _CarCenPag();
 }
 
-class _CarSelectPag extends State<CarSelectPag> {
+class _CarCenPag extends State<CarCenPag> {
 
   List<Carro> carros = [
     Carro(
-      nome: 'Apophis',
-      img: [
-        'img/carros/1/car01.jpeg'
+      textosPag: [
+        'CARROS'
       ],
-      nomepiloto: 'piloto',
-      habilidade: 'habilidade'
+      nomeCarro: 'Apophis',
+      img: [
+        'img/carros/1/car01.jpeg',
+      ],
+      habilidade: 'habilidade',
+      origem: '',
+      icons: [
+        Icons.arrow_back_ios,
+      ],
     ),
     Carro(
-      nome: 'Caçador', 
+      textosPag: [
+        ''
+      ],
+      nomeCarro: 'Caçador', 
       img: [
-        'img/carros/2/car01.jpeg'
-      ], 
-      nomepiloto: 'piloto', 
-      habilidade: 'habilidade'
+        'img/carros/2/car01.jpeg',
+      ],
+      habilidade: 'habilidade',
+      origem: '',
+      icons: [
+        Icons.arrow_back_ios,
+      ],
     ),
     Carro(
-      nome: 'E.V.A.', 
+      textosPag: [
+        ''
+      ],
+      nomeCarro: 'E.V.A.',
       img: [
-        'img/carros/3/car01.jpeg'
-      ], 
-      nomepiloto: 'piloto', 
-      habilidade: 'habilidade'
+        'img/carros/3/car01.jpeg',
+      ],
+      habilidade: 'habilidade',
+      origem: '',
+      icons: [
+        Icons.arrow_back_ios,
+      ],
     ),
     Carro(
-      nome: 'Mercúrio', 
+      textosPag: [
+        ''
+      ],
+      nomeCarro: 'Mercúrio',
       img: [
-        'img/carros/4/car01.jpeg'
-      ], 
-      nomepiloto: 'piloto', 
-      habilidade: 'habilidade'
+        'img/carros/4/car01.jpeg',
+      ],
+      habilidade: 'habilidade',
+      origem: '',
+      icons: [
+        Icons.arrow_back_ios,
+      ],
     ),
     Carro(
-      nome: 'Raptor',
+      textosPag: [
+        ''
+      ],
+      nomeCarro: 'Raptor',
       img: [
-        'img/carros/5/car01.jpeg'
-      ], 
-      nomepiloto: 'piloto', 
-      habilidade: 'habilidade'
+        'img/carros/5/car01.jpeg',
+      ],
+      habilidade: 'habilidade',
+      origem: '',
+      icons: [
+        Icons.arrow_back_ios,
+      ],
     ),
     Carro(
-      nome: 'Ultravioleta', 
+      textosPag: [
+        ''
+      ],
+      nomeCarro: 'Ultravioleta',
       img: [
-        'img/carros/6/car01.jpeg'
-      ], 
-      nomepiloto: 'piloto', 
-      habilidade: 'habilidade'
+        'img/carros/6/car01.jpeg',
+      ],
+      habilidade: 'habilidade',
+      origem: '',
+      icons: [
+        Icons.arrow_back_ios,
+      ],
     ),
   ];
 
   List<Cenario> cenarios = [
     Cenario(
-      nome: 'Fujikawa', 
+      tituloPag: '',
+      nome: 'Fujikawa',
+      nomeOg: 'Japão',
       img: [
-        'img/carros/1/car01.jpeg'
-      ], 
-      nomeReal: 'Japão',
+        'img/carros/1/car01.jpeg',
+      ],
+      desc: 'Descrição.',
+      estetica: '',
       desafios: [
         '1',
         '2'
-      ]
+      ],
+      historia: '',
+      icons: [
+        Icons.arrow_back_ios,
+      ],
     ),
     Cenario(
-      nome: 'Guarapári', 
+      tituloPag: '',
+      nome: 'Guarapári',
+      nomeOg: 'Brasil',
       img: [
-        'img/carros/2/car01.jpeg'
-      ], 
-      nomeReal: 'Brasil',
+        'img/carros/2/car01.jpeg',
+      ],
+      desc: 'Descrição.',
+      estetica: '',
       desafios: [
         '1',
         '2'
-      ]
+      ],
+      historia: '',
+      icons: [
+        Icons.arrow_back_ios,
+      ],
     ),
     Cenario(
-      nome: 'Harimo', 
+      tituloPag: '',
+      nome: 'Harimo',
+      nomeOg: 'Egito',
       img: [
-        'img/carros/3/car01.jpeg'
-      ], 
-      nomeReal: 'Egito',
+        'img/carros/3/car01.jpeg',
+      ],
+      desc: 'Descrição.',
+      estetica: '',
       desafios: [
         '1',
         '2'
-      ]
+      ],
+      historia: '',
+      icons: [
+        Icons.arrow_back_ios,
+      ],
     ),
     Cenario(
-      nome: 'Melbourne', 
+      tituloPag: '',
+      nome: 'Melbourne',
+      nomeOg: 'Austrália',
       img: [
-        'img/carros/4/car01.jpeg'
-      ], 
-      nomeReal: 'Austrália',
+        'img/carros/4/car01.jpeg',
+      ],
+      desc: 'Descrição.',
+      estetica: '',
       desafios: [
         '1',
         '2'
-      ]
+      ],
+      historia: '',
+      icons: [
+        Icons.arrow_back_ios,
+      ],
     ),
     Cenario(
-      nome: 'Neo Londres', 
+      tituloPag: '',
+      nome: 'Neo Londres',
+      nomeOg: 'Reino Unido',
       img: [
-        'img/carros/5/car01.jpeg'
-      ], 
-      nomeReal: 'Reino Unido',
+        'img/carros/5/car01.jpeg',
+      ],
+      desc: 'Descrição.',
+      estetica: '',
       desafios: [
         '1',
         '2'
-      ]
+      ],
+      historia: '',
+      icons: [
+        Icons.arrow_back_ios,
+      ],
     ),
   ];
 
@@ -196,6 +267,7 @@ class _CarSelectPag extends State<CarSelectPag> {
                         autoPlay: true,
                         autoPlayAnimationDuration: const Duration(seconds: 3),
                         autoPlayInterval: const Duration(seconds: 7),
+                        enlargeCenterPage: true,
                         onPageChanged: (currentIndex, reason) {
                           setState(() {
                             index = currentIndex;
@@ -213,7 +285,7 @@ class _CarSelectPag extends State<CarSelectPag> {
                           child: IconButton(
                             onPressed: () => navegacaoCarro(), 
                             icon: Image.asset(carros[0].img[0]),
-                            tooltip: carros[0].nome,
+                            tooltip: carros[0].nomeCarro,
                           ),
                         ),
                         Container(
@@ -226,7 +298,7 @@ class _CarSelectPag extends State<CarSelectPag> {
                           child: IconButton(
                             onPressed: () => navegacaoCarro(), 
                             icon: Image.asset(carros[1].img[0]),
-                            tooltip: carros[1].nome,
+                            tooltip: carros[1].nomeCarro,
                           ),
                         ),
                         Container(
@@ -239,7 +311,7 @@ class _CarSelectPag extends State<CarSelectPag> {
                           child: IconButton(
                             onPressed: () => navegacaoCarro(), 
                             icon: Image.asset(carros[2].img[0]),
-                            tooltip: carros[2].nome,
+                            tooltip: carros[2].nomeCarro,
                           ),
                         ),
                         Container(
@@ -252,7 +324,7 @@ class _CarSelectPag extends State<CarSelectPag> {
                           child: IconButton(
                             onPressed: () => navegacaoCarro(), 
                             icon: Image.asset(carros[3].img[0]),
-                            tooltip: carros[3].nome,
+                            tooltip: carros[3].nomeCarro,
                           ),
                         ),
                         Container(
@@ -265,7 +337,7 @@ class _CarSelectPag extends State<CarSelectPag> {
                           child: IconButton(
                             onPressed: () => navegacaoCarro(), 
                             icon: Image.asset(carros[4].img[0]),
-                            tooltip: carros[4].nome,
+                            tooltip: carros[4].nomeCarro,
                           ),
                         ),
                         Container(
@@ -278,7 +350,7 @@ class _CarSelectPag extends State<CarSelectPag> {
                           child: IconButton(
                             onPressed: () => navegacaoCarro(), 
                             icon: Image.asset(carros[5].img[0]),
-                            tooltip: carros[5].nome,
+                            tooltip: carros[5].nomeCarro,
                           ),
                         ),
                       ],
@@ -296,6 +368,7 @@ class _CarSelectPag extends State<CarSelectPag> {
                         autoPlay: true,
                         autoPlayAnimationDuration: const Duration(seconds: 3),
                         autoPlayInterval: const Duration(seconds: 7),
+                        enlargeCenterPage: true,
                         onPageChanged: (currentIndex, reason) {
                           setState((){
                             index = currentIndex;

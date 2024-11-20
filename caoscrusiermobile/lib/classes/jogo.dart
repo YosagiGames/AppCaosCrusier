@@ -22,4 +22,15 @@ class Jogo {
     required this.motivoJogo,
     required this.icons,
   });
+
+  Widget construirTitulo({required String title}){
+    return Text(
+      title,
+      style: TextStyle(
+        fontFamily: 'Horizon',
+        fontSize: 25,
+        color: Color.fromARGB(255, 255, 187, 0),
+      ),
+    );
+  }
 }

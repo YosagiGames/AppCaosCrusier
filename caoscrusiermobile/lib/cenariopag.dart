@@ -1,4 +1,4 @@
-import 'package:caoscruisermobile/cenario.dart';
+import 'package:caoscruisermobile/classes/cenario.dart';
 import 'package:flutter/material.dart';
 
 class CenarioPag extends StatelessWidget{

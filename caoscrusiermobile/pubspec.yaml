@@ -18,6 +18,12 @@ dev_dependencies:
 
 flutter:
   fonts:
+    - family: MonsterRacing
+      fonts:
+        - asset: fonts/MonsterRacing/MonsterRacing.ttf
+    - family: Horizon
+      fonts:
+        - asset: fonts/Horizon/horizon.ttf
     - family: ABeeZee
       fonts:
         - asset: fonts/ABeeZee/ABeeZee-Regular.ttf

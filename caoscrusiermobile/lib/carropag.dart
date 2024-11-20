@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:caoscruisermobile/carro.dart';
+import 'package:caoscruisermobile/classes/carro.dart';
 //import 'package:caoscruisermobile/carselectpag.dart';
 
 class CarroPag extends StatefulWidget{
@@ -38,22 +38,22 @@ class _CarroPag extends State<CarroPag> {
 
     final carro = ModalRoute.of(context)!.settings.arguments as Carro;
 
-    if (carro.nome == 'Apophis') {
+    if (carro.nomeCarro == 'Apophis') {
       p;
     }
-    else if (carro.nome == 'Caçador'){
+    else if (carro.nomeCarro == 'Caçador'){
       p = 2;
     }
-    else if (carro.nome == 'E.V.A.'){
+    else if (carro.nomeCarro == 'E.V.A.'){
       p = 3;
     }
-    else if (carro.nome == 'Mercúrio'){
+    else if (carro.nomeCarro == 'Mercúrio'){
       p = 4;
     }
-    else if (carro.nome == 'Raptor'){
+    else if (carro.nomeCarro == 'Raptor'){
       p = 5;
     }
-    else if (carro.nome == 'Ultravioleta'){
+    else if (carro.nomeCarro == 'Ultravioleta'){
       p = 6;
     }
 
@@ -102,7 +102,7 @@ class _CarroPag extends State<CarroPag> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                Text(carro.nome, style: const TextStyle(color: Colors.white),),
+                Text(carro.nomeCarro, style: const TextStyle(color: Colors.white),),
                 Image.asset(imagens[i]),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -121,7 +121,6 @@ class _CarroPag extends State<CarroPag> {
                     const Padding(padding: EdgeInsets.all(2),),
                   ],
                 ),
-                Text(carro.nomepiloto, style: const TextStyle(color: Colors.white),),
                 Text(carro.habilidade, style: const TextStyle(color: Colors.white),),
               ],
             ),

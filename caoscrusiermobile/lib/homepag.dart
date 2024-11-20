@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:caoscruisermobile/jogo.dart';
+import 'package:caoscruisermobile/classes/jogo.dart';
 import 'package:caoscruisermobile/inspopag.dart';
 import 'package:caoscruisermobile/gamepag.dart';
 
