@@ -23,7 +23,11 @@ class GamePag extends StatelessWidget{
               ),
             ),
           ), // cor de fundo da AppBar
-          leading: IconButton(icon: const Icon(Icons.arrow_back_ios,), color: const Color.fromARGB(255, 255, 187, 0), onPressed: () => Navigator.pop,),
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back_ios,),
+            color: const Color.fromARGB(255, 255, 187, 0),
+            onPressed: () => Navigator.pop(context),
+          ),
           title: construirTitulo(title: caosCrusier.textosPag[5]),
           centerTitle: true,
         ),

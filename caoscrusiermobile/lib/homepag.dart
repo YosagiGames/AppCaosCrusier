@@ -21,6 +21,7 @@ class _HomePag extends State<HomePag> {
       'Carros',
       'Cenários',
       'Nossa Inspiração',
+      'DESENVOLVEDORES'
     ],
     titulo: 'Caos Crusier',
     capa: 'img/capa.png',
@@ -79,8 +80,11 @@ class _HomePag extends State<HomePag> {
             onPressed: () => Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const DevsPag()
-              )
+                builder: (context) => const DevsPag(),
+                settings: RouteSettings(
+                  arguments: caosCrusier,
+                ),
+              ),
             ),
             icon: Icon(Icons.person),
             style: ButtonStyle(
