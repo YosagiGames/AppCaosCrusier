@@ -17,9 +17,14 @@ class _ArtePag extends State<ArtePag> {
     Arte(
       titulo: 'HUD',
       imgs: [
-        '',
+        'img/arte/hud/telaMenu.png',
+        'img/arte/hud/telaConfig.png',
+        'img/arte/hud/ImgHUD.png',
+        'img/arte/hud/posicaoElementos.png',
+        'img/arte/hud/selecaoCenarioPosicao.png',
+        'img/arte/hud/resultadosPosicao.png',
       ],
-      desc: 'desc',
+      desc: 'O HUD é a interface do usuário, ela inclui: menu, configurações, tela de jogo (o velocimetro, informações do personagem e contagem de tempo e ultrapassagem), tela de pause e tela de resultados. Cada parte foi pensada de uma forma que complemente o jogo, combinando com o visual de Caos Crusier.',
       icons: [
         Icons.arrow_back_ios
       ],
@@ -27,9 +32,14 @@ class _ArtePag extends State<ArtePag> {
     Arte(
       titulo: 'LEVEL DESIGN',
       imgs: [
-        '',
+        'img/arte/level_design/australia.jpg',
+        'img/arte/level_design/brasil.jpg',
+        'img/arte/level_design/egito1.jpg',
+        'img/arte/level_design/egito2.jpg',
+        'img/arte/level_design/japao.jpeg',
+        'img/arte/level_design/reino_unido.jpeg',
       ],
-      desc: 'desc',
+      desc: 'O level design define o formato das pistas de cada cenário de Caos Crusier, portanto, sendo um jogo de corrida, nos baseamos em pistas reais, obras culturais e os mapas dos locais para montar cada uma das pistas.',
       icons: [
         Icons.arrow_back_ios
       ],
@@ -126,12 +136,58 @@ class _ArtePag extends State<ArtePag> {
                             ),
                             padding: const EdgeInsets.all(20.0),
                             margin: const EdgeInsets.all(10.0),
-                            child: Image.asset(artes[0].imgs[0]),
+                            child: Image.asset(artes[0].imgs[0], width: 350, height: 350,),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: const Color.fromARGB(255, 0, 20, 49), 
+                            ),
+                            padding: const EdgeInsets.all(20.0),
+                            margin: const EdgeInsets.all(10.0),
+                            child: Image.asset(artes[0].imgs[1], width: 350, height: 350,),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: const Color.fromARGB(255, 0, 20, 49), 
+                            ),
+                            padding: const EdgeInsets.all(20.0),
+                            margin: const EdgeInsets.all(10.0),
+                            child: Image.asset(artes[0].imgs[2], width: 350, height: 350,),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: const Color.fromARGB(255, 0, 20, 49), 
+                            ),
+                            padding: const EdgeInsets.all(20.0),
+                            margin: const EdgeInsets.all(10.0),
+                            child: Image.asset(artes[0].imgs[3], width: 350, height: 350,),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: const Color.fromARGB(255, 0, 20, 49), 
+                            ),
+                            padding: const EdgeInsets.all(20.0),
+                            margin: const EdgeInsets.all(10.0),
+                            child: Image.asset(artes[0].imgs[4], width: 350, height: 350,),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: const Color.fromARGB(255, 0, 20, 49), 
+                            ),
+                            padding: const EdgeInsets.all(20.0),
+                            margin: const EdgeInsets.all(10.0),
+                            child: Image.asset(artes[0].imgs[5], width: 350, height: 350,),
                           ),
                         ],
                       ),
                       Text(
                         artes[0].desc,
+                        textAlign: TextAlign.justify,
                         style: TextStyle(
                           fontFamily: 'AbeeZee',
                           color: Colors.white,
@@ -178,14 +234,60 @@ class _ArtePag extends State<ArtePag> {
                               borderRadius: BorderRadius.circular(20),
                               color: const Color.fromARGB(255, 0, 20, 49), 
                             ),
-                            padding: const EdgeInsets.all(20.0),
+                            padding: const EdgeInsets.all(10.0),
                             margin: const EdgeInsets.all(10.0),
-                            child: Image.asset(artes[1].imgs[0]),
+                            child: Image.asset(artes[1].imgs[0], height: 350, width: 350,),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: const Color.fromARGB(255, 0, 20, 49), 
+                            ),
+                            padding: const EdgeInsets.all(10.0),
+                            margin: const EdgeInsets.all(10.0),
+                            child: Image.asset(artes[1].imgs[1], height: 350, width: 350,),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: const Color.fromARGB(255, 0, 20, 49), 
+                            ),
+                            padding: const EdgeInsets.all(10.0),
+                            margin: const EdgeInsets.all(10.0),
+                            child: Image.asset(artes[1].imgs[2], height: 350, width: 350,),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: const Color.fromARGB(255, 0, 20, 49), 
+                            ),
+                            padding: const EdgeInsets.all(10.0),
+                            margin: const EdgeInsets.all(10.0),
+                            child: Image.asset(artes[1].imgs[3], height: 350, width: 350,),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: const Color.fromARGB(255, 0, 20, 49), 
+                            ),
+                            padding: const EdgeInsets.all(10.0),
+                            margin: const EdgeInsets.all(10.0),
+                            child: Image.asset(artes[1].imgs[4], height: 350, width: 350,),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: const Color.fromARGB(255, 0, 20, 49), 
+                            ),
+                            padding: const EdgeInsets.all(10.0),
+                            margin: const EdgeInsets.all(10.0),
+                            child: Image.asset(artes[1].imgs[5], height: 350, width: 350,),
                           ),
                         ],
                       ),
                       Text(
                         artes[1].desc,
+                        textAlign: TextAlign.justify,
                         style: TextStyle(
                           color: Colors.white,
                         ),
@@ -193,7 +295,7 @@ class _ArtePag extends State<ArtePag> {
                     ],
                   ),
                 ),
-                Padding(padding: EdgeInsets.all(10)),
+                /*Padding(padding: EdgeInsets.all(10)),
                 Container(
                   margin: const EdgeInsets.all(16.0),
                   padding: const EdgeInsets.all(16.0),
@@ -245,7 +347,7 @@ class _ArtePag extends State<ArtePag> {
                       ),
                     ],
                   ),
-                ),
+                ),*/
               ],
             ),
           ),

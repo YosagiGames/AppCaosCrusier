@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   carousel_slider: ^5.0.0
+  video_player: ^2.9.2
 
 dev_dependencies:
   flutter_test:
@@ -38,5 +39,14 @@ flutter:
     - img/carros/4/
     - img/carros/5/
     - img/carros/6/
-    - img/cenarios/
+    - img/cenarios/1/
+    - img/cenarios/2/
+    - img/cenarios/3/
+    - img/cenarios/4/
+    - img/cenarios/5/
     - img/devs/
+    - img/arte/level_design/
+    - img/arte/hud/
+    - img/jogo/
+    - img/enduro/
+    - video/

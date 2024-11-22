@@ -1,3 +1,4 @@
+import 'package:caoscruisermobile/historiapag.dart';
 import 'package:flutter/material.dart';
 import 'package:caoscruisermobile/classes/jogo.dart';
 
@@ -23,12 +24,11 @@ class GamePag extends StatelessWidget{
               ),
             ),
           ), // cor de fundo da AppBar
-          leading: IconButton(
-            icon: const Icon(Icons.arrow_back_ios,),
-            color: const Color.fromARGB(255, 255, 187, 0),
+          leading: caosCrusier.construirIconButton(
+            icon: Icon(caosCrusier.icons[5]),
             onPressed: () => Navigator.pop(context),
           ),
-          title: construirTitulo(title: caosCrusier.textosPag[5]),
+          title: caosCrusier.construirTitleAppBar(title: caosCrusier.textosPag[0]),
           centerTitle: true,
         ),
         body: Center(
@@ -38,33 +38,105 @@ class GamePag extends StatelessWidget{
                 begin: Alignment.topRight,
                 end: Alignment.bottomLeft,
                 colors: [
-                  Color.fromARGB(255, 82, 0, 102),
-                  Color.fromARGB(255, 90, 0, 126),
-                  Color.fromARGB(255, 119, 0, 143),
+                  Color.fromARGB(255, 64, 4, 89),
+                  Color.fromARGB(255, 14, 1, 55),
                 ],
               )
             ),
             child: Center(
-              child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    const Text(
-                      'Sobre o Jogo',
-                      style: TextStyle(
-                        fontFamily: 'ABeeZee', fontSize: 18, color: Color.fromARGB(255, 255, 255, 255)),
-                    ),
-                    Image.asset('img/paggame.png', width: 310, height: 200,),
-                    const SizedBox(
-                      width: 380,
-                      child: Text(
-                        'Em busca do título de melhor do mundo e de suporte com melhorias tecnológicas, 6 pilotos competem entre si na [corrida super daora] em uma tour intercontinental que passa por 5 países (Austrália, Brasil, Egito, Inglaterra e Japão).',
+              child: Container (
+                margin: const EdgeInsets.all(16.0),
+                padding: const EdgeInsets.all(16.0),
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(45)),
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      Color.fromARGB(255, 88, 0, 123),
+                      Color.fromARGB(255, 57, 0, 71),
+                    ],
+                  ),
+                ),
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      caosCrusier.construirTitulo(title: caosCrusier.textosPag[3]),
+                      Padding(padding: EdgeInsets.all(6)),
+                      Image.asset(caosCrusier.imgs[0]),
+                      Padding(padding: EdgeInsets.all(4)),
+                      Text(
+                        caosCrusier.caracteristicas,
                         textAlign: TextAlign.justify,
                         style: TextStyle(
-                          fontFamily: 'ABeeZee', fontSize: 15, color: Colors.white,
+                          color: Colors.white,
+                          fontFamily: 'ABeeZee',
+                          fontSize: 15,
                         ),
                       ),
-                    ),
-                  ],
+                      Padding(padding: EdgeInsets.all(5)),
+                      ElevatedButton(
+                        onPressed: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => HistoriaPag(),
+                          ),
+                        ),
+                        style: ButtonStyle(
+                          backgroundColor: WidgetStatePropertyAll(Color.fromARGB(255, 255, 187, 0))
+                        ),
+                        child: Text(
+                          caosCrusier.textosPag[7],
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontFamily: 'ABeeZee',
+                          ),
+                        ),
+                      ),
+                      Padding(padding: EdgeInsets.all(7)),
+                      caosCrusier.construirTitulo(title: caosCrusier.textosPag[4]),
+                      Padding(padding: EdgeInsets.all(6)),
+                      Image.asset(caosCrusier.imgs[1]),
+                      Padding(padding: EdgeInsets.all(4)),
+                      Text(
+                        caosCrusier.objetivo,
+                        textAlign: TextAlign.justify,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontFamily: 'ABeeZee',
+                          fontSize: 15,
+                        ),
+                      ),
+                      Padding(padding: EdgeInsets.all(7)),
+                      caosCrusier.construirTitulo(title: caosCrusier.textosPag[5]),
+                      Padding(padding: EdgeInsets.all(6)),
+                      Image.asset(caosCrusier.imgs[2]),
+                      Padding(padding: EdgeInsets.all(4)),
+                      Text(
+                        caosCrusier.tematica,
+                        textAlign: TextAlign.justify,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontFamily: 'ABeeZee',
+                          fontSize: 15,
+                        ),
+                      ),
+                      Padding(padding: EdgeInsets.all(7)),
+                      caosCrusier.construirTitulo(title: caosCrusier.textosPag[6]),
+                      Padding(padding: EdgeInsets.all(6)),
+                      Image.asset(caosCrusier.imgs[3]),
+                      Padding(padding: EdgeInsets.all(4)),
+                      Text(
+                        caosCrusier.motivoJogo,
+                        textAlign: TextAlign.justify,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontFamily: 'ABeeZee',
+                          fontSize: 15,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               )
             ),

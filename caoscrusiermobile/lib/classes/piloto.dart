@@ -22,6 +22,7 @@ class Piloto {
     return IconButton(
       onPressed: onPressed,
       icon: icon,
+      color: Color.fromARGB(255, 255, 187, 0),
     );
   }
 }

@@ -22,6 +22,7 @@ class Dev {
       ),
     );
   }
+  
   Widget construirTitleAppBar({required String title}){
     return Text(
       title,

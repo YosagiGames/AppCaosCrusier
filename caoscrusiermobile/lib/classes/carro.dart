@@ -20,8 +20,21 @@ class Carro {
   Widget construirTitulo({required String title}){
     return Text(
       title,
+      textAlign: TextAlign.center,
       style: TextStyle(
         fontFamily: 'Horizon',
+        fontSize: 20,
+        color: Color.fromARGB(255, 255, 187, 0),
+      ),
+    );
+  }
+
+  Widget construirTitleAppBar({required String title}){
+    return Text(
+      title,
+      textAlign: TextAlign.center,
+      style: TextStyle(
+        fontFamily: 'MonsterRacing',
         fontSize: 25,
         color: Color.fromARGB(255, 255, 187, 0),
       ),

@@ -30,13 +30,26 @@ class Enduro {
     );
   }
 
-  construirIconButton({
+  Widget construirTitleAppBar({required String title}){
+    return Text(
+      title,
+      textAlign: TextAlign.center,
+      style: TextStyle(
+        fontFamily: 'MonsterRacing',
+        fontSize: 25,
+        color: Color.fromARGB(255, 255, 187, 0),
+      ),
+    );
+  }
+
+  Widget construirIconButton({
     required VoidCallback onPressed,
-    required Icon icon,
+    required Widget icon,
   }){
     return IconButton(
       onPressed: onPressed,
       icon: icon,
+      color: Color.fromARGB(255, 255, 187, 0),
     );
   }
 }

@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
 class Cenario {
-  final String tituloPag;
+  final List<String> textosPag;
   final String nome;
   final String nomeOg;
   final List<String> img;
   final String desc;
   final String estetica;
-  final List<String> desafios;
+  final String desafios;
   final String historia;
   final List<IconData> icons;
 
   Cenario({
-    required this.tituloPag,
+    required this.textosPag,
     required this.nome,
     required this.nomeOg,
     required this.img,
@@ -30,6 +30,7 @@ class Cenario {
     return IconButton(
       onPressed: onPressed,
       icon: icon,
+      color: Color.fromARGB(255, 255, 187, 0),
     );
   }
 
@@ -38,6 +39,18 @@ class Cenario {
       title,
       style: TextStyle(
         fontFamily: 'Horizon',
+        fontSize: 20,
+        color: Color.fromARGB(255, 255, 187, 0),
+      ),
+    );
+  }
+
+  Widget construirTitleAppBar({required String title}){
+    return Text(
+      title,
+      textAlign: TextAlign.center,
+      style: TextStyle(
+        fontFamily: 'MonsterRacing',
         fontSize: 25,
         color: Color.fromARGB(255, 255, 187, 0),
       ),
