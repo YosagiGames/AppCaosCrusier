@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:caoscruisermobile/classes/jogo.dart';
-import 'package:caoscruisermobile/classes/empresa.dart';
 import 'package:caoscruisermobile/inspopag.dart';
 import 'package:caoscruisermobile/gamepag.dart';
 import 'package:caoscruisermobile/devspag.dart';
@@ -33,6 +32,7 @@ class _HomePag extends State<HomePag> {
       'img/cenarios/2/BrasilCapsula.jpeg',
       'img/cenarios/4/OperaHouse.jpeg',
       'img/cenarios/5/palacio.jpeg',
+      'img/yosagilogo.jpg',
     ],
     sinopse: 'Caos Crusier é um jogo de corrida retrô inspirado nos jogos de corrida clássico dos anos 80 a 90, com o objetivo de ultrapassar diversos carros em um período de um dia. Se passa ao redor do mundo viajando por alguns países como Inglaterra, Brasil, Japão, Austrália e Egito, onde cada um tem sua estética de ambiente diferente, além de terem alguns fatores naturais únicos que o jogador enfrentará para vencer seus adversários. Com diversas opções de carros com diferentes habilidades especiais e estilos que os tornam mais incríveis e divertidos. Fique atento à pista e não relaxe pois será ultrapassado.',
     caracteristicas: 'O jogo Caos Crusier é um jogo de corrida ambientado em um universo 3D. Utilizando de seleção de carros e cenários de forma dinâmica e clara, suas características se baseiam por transmitir o lúdico juntamente com a ficção científica, a essência de competitividade e adrenalina... Dessa forma, trazendo a imersão da verdadeira velocidade para o jogador que desfrutar de nosso universo. O jogador terá abertura para escolher seus carros, ao qual, cada um possui suas habilidades específicas. Também, deverá escolher sua pista que possuem ambientações complexas e diversificadas, niveis de dificuldades e fatos climáticos, o verdadeiro diferencial.',
@@ -49,11 +49,7 @@ class _HomePag extends State<HomePag> {
     ]
   );
 
-  final Empresa yosagiGames = Empresa(
-    'Yosagi Games',
-    'img/yosagilogo.jpg',
-    'A Yosagi Games é uma empresa de desenvolvimento de jogos criada para o TCC do curso técnico de Programação de Jogos Digitais.'
-  );
+  
 
   dynamic navegacao(Widget pagina) {
     Navigator.push(
@@ -92,7 +88,7 @@ class _HomePag extends State<HomePag> {
           ),
           centerTitle: true,
           leading: caosCrusier.construirIconButton(
-            icon: CircleAvatar(foregroundImage: AssetImage(yosagiGames.logo),),
+            icon: CircleAvatar(foregroundImage: AssetImage(caosCrusier.imgs[4]),),
             onPressed: () => Navigator.push(
               context,
               MaterialPageRoute(
@@ -134,7 +130,7 @@ class _HomePag extends State<HomePag> {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    Image.asset('img/capa.jpg', width: 400, height: 380,),
+                    Image.asset(caosCrusier.capa, width: 400, height: 380,),
                     Text(
                       caosCrusier.sinopse,
                       textAlign: TextAlign.justify,
@@ -157,7 +153,7 @@ class _HomePag extends State<HomePag> {
                         child: caosCrusier.construirTextoBotao(title: caosCrusier.textosPag[0])
                       ),
                     ),
-                    const Padding(padding: EdgeInsets.all(5)),
+                    Padding(padding: EdgeInsets.all(5)),
                     SizedBox(
                       height: 40,
                       child: ElevatedButton(
@@ -173,15 +169,6 @@ class _HomePag extends State<HomePag> {
           ),
         ),
       ),
-    );
-  }
-
-  Widget construirTitulo({
-    required String title
-  }){
-    return Text(
-      title, 
-      style: const TextStyle(color: Colors.black),
     );
   }
 }

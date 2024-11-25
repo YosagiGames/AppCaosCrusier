@@ -47,12 +47,17 @@ class _DevsPag extends State<DevsPag> {
       'Funções: programação e modelagem 3D.',
     ),
   ];
+
+  final Empresa yosagiGames = Empresa(
+    'Yosagi Games',
+    'img/yosagilogo.jpg',
+    'A Yosagi Games é uma empresa de desenvolvimento de jogos criada para o TCC do curso técnico de Programação de Jogos Digitais.'
+  );
   
   @override
   Widget build(BuildContext context){
 
     final caosCrusier = ModalRoute.of(context)!.settings.arguments as Jogo;
-    final yosagiGames = ModalRoute.of(context)!.settings.arguments as Empresa;
 
     return Scaffold(
       appBar: AppBar(
@@ -69,10 +74,10 @@ class _DevsPag extends State<DevsPag> {
           ),
         ),
         leading: caosCrusier.construirIconButton(
-          icon: Icon(caosCrusier.icons[2]),
+          icon: Icon(caosCrusier.icons[5]),
           onPressed: () => Navigator.pop(context),
         ),
-        title: caosCrusier.construirTitleAppBar(title: caosCrusier.textosPag[3]),
+        title: caosCrusier.construirTitleAppBar(title: caosCrusier.textosPag[2]),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -124,6 +129,42 @@ class _DevsPag extends State<DevsPag> {
                     ],)
                   ),
                 ),
+                /*ListView.builder(
+                  itemBuilder: (context, index) {
+                    return Container(
+                      margin: const EdgeInsets.all(16.0),
+                      padding: const EdgeInsets.all(16.0),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.black),
+                        borderRadius: BorderRadius.all(Radius.circular(45)),
+                        gradient: LinearGradient(
+                          begin: Alignment.topRight,
+                          end: Alignment.bottomLeft,
+                          colors: [
+                            Color.fromARGB(255, 82, 0, 102),
+                            Color.fromARGB(255, 90, 0, 126),
+                            Color.fromARGB(255, 119, 0, 143),
+                          ],
+                        )
+                      ),
+                      child: Column(
+                        children: [
+                          devs[index].construirTitulo(title: devs[index].nome,),
+                          Image.asset(devs[index].foto, width: 350, height: 350,),
+                          Padding(padding: EdgeInsets.all(5)),
+                          Text(
+                            devs[index].funcao,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontFamily: 'ABeeZee',
+                              fontSize: 15,
+                            ),
+                          ),
+                        ],
+                      ),
+                    );
+                  }
+                ),*/
                 Container(
                   margin: const EdgeInsets.all(16.0),
                   padding: const EdgeInsets.all(16.0),
@@ -331,7 +372,7 @@ class _DevsPag extends State<DevsPag> {
                   ),
                 ),
               ],
-            ),
+            )
           ),
         ),
       ),
