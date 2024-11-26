@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 
 class Arte {
   final String titulo;
-  final List<String> imgs;
+  final List<String> textos;
+  final List<String> caminhos;
   final String desc;
   final List<IconData> icons;
 
   Arte({
     required this.titulo,
-    required this.imgs,
+    required this.textos,
+    required this.caminhos,
     required this.desc,
     required this.icons,
   });
