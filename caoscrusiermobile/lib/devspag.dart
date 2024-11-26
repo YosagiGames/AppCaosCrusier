@@ -13,7 +13,7 @@ class DevsPag extends StatefulWidget{
 class _DevsPag extends State<DevsPag> {
 
   int index = 0;
-  //final ScrollController _controller = ScrollController();
+  final ScrollController _controller = ScrollController();
 
   List<Dev> devs = [
     Dev(
@@ -82,7 +82,7 @@ class _DevsPag extends State<DevsPag> {
       ),
       body: SingleChildScrollView(
         child: Center(
-            child: Container(
+          child: Container(
             decoration: const BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
@@ -114,22 +114,23 @@ class _DevsPag extends State<DevsPag> {
                   child: SizedBox(
                     width: 430, 
                     child: Column(
-                    children: [
-                      yosagiGames.construirTitulo(title: yosagiGames.nome,),
-                      CircleAvatar(foregroundImage: AssetImage(yosagiGames.logo), maxRadius: 150,),
-                      Padding(padding: EdgeInsets.all(5)),
-                      Text(
-                        yosagiGames.desc,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontFamily: 'ABeeZee',
-                          fontSize: 15
+                      children: [
+                        yosagiGames.construirTitulo(title: yosagiGames.nome,),
+                        CircleAvatar(foregroundImage: AssetImage(yosagiGames.logo), maxRadius: 150,),
+                        Padding(padding: EdgeInsets.all(5)),
+                        Text(
+                          yosagiGames.desc,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: 'ABeeZee',
+                            fontSize: 15
+                          ),
                         ),
-                      ),
-                    ],)
+                      ],
+                    )
                   ),
                 ),
-                /*ListView.builder(
+                ListView.builder(
                   itemBuilder: (context, index) {
                     return Container(
                       margin: const EdgeInsets.all(16.0),
@@ -163,219 +164,19 @@ class _DevsPag extends State<DevsPag> {
                         ],
                       ),
                     );
-                  }
-                ),*/
-                Container(
-                  margin: const EdgeInsets.all(16.0),
-                  padding: const EdgeInsets.all(16.0),
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black),
-                    borderRadius: BorderRadius.all(Radius.circular(45)),
-                    gradient: LinearGradient(
-                      begin: Alignment.topRight,
-                      end: Alignment.bottomLeft,
-                      colors: [
-                        Color.fromARGB(255, 82, 0, 102),
-                        Color.fromARGB(255, 90, 0, 126),
-                        Color.fromARGB(255, 119, 0, 143),
-                      ],
-                    )
-                  ),
-                  child: SizedBox(
-                    width: 430, 
-                    child: Column(
-                    children: [
-                      devs[0].construirTitulo(title: devs[0].nome,),
-                      Image.asset(devs[0].foto, width: 350, height: 350,),
-                      Padding(padding: EdgeInsets.all(5)),
-                      Text(
-                        devs[0].funcao,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontFamily: 'ABeeZee',
-                          fontSize: 15,
-                        ),
-                      ),
-                    ],)
-                  ),
-                ),
-                Container(
-                  margin: const EdgeInsets.all(16.0),
-                  padding: const EdgeInsets.all(16.0),
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black),
-                    borderRadius: BorderRadius.all(Radius.circular(45)),
-                    gradient: LinearGradient(
-                      begin: Alignment.topRight,
-                      end: Alignment.bottomLeft,
-                      colors: [
-                        Color.fromARGB(255, 82, 0, 102),
-                        Color.fromARGB(255, 90, 0, 126),
-                        Color.fromARGB(255, 119, 0, 143),
-                      ],
-                    )
-                  ),
-                  child: SizedBox(
-                    width: 430, 
-                    child: Column(
-                    children: [
-                      devs[1].construirTitulo(title: devs[1].nome,),
-                      Image.asset(devs[1].foto, width: 350, height: 350,),
-                      Padding(padding: EdgeInsets.all(5)),
-                      Text(
-                        devs[1].funcao,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontFamily: 'ABeeZee',
-                          fontSize: 15
-                        ),
-                      ),
-                    ],)
-                  ),
-                ),
-                Container(
-                  margin: const EdgeInsets.all(16.0),
-                  padding: const EdgeInsets.all(16.0),
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black),
-                    borderRadius: BorderRadius.all(Radius.circular(45)),
-                    gradient: LinearGradient(
-                      begin: Alignment.topRight,
-                      end: Alignment.bottomLeft,
-                      colors: [
-                        Color.fromARGB(255, 82, 0, 102),
-                        Color.fromARGB(255, 90, 0, 126),
-                        Color.fromARGB(255, 119, 0, 143),
-                      ],
-                    )
-                  ),
-                  child: SizedBox(
-                    width: 430, 
-                    child: Column(
-                    children: [
-                      devs[2].construirTitulo(title: devs[2].nome,),
-                      Image.asset(devs[2].foto, width: 350, height: 350,),
-                      Padding(padding: EdgeInsets.all(5)),
-                      Text(
-                        devs[2].funcao,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontFamily: 'ABeeZee',
-                          fontSize: 15
-                        ),
-                      ),
-                    ],),
-                  ),
-                ),
-                Container(
-                  margin: const EdgeInsets.all(16.0),
-                  padding: const EdgeInsets.all(16.0),
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black),
-                    borderRadius: BorderRadius.all(Radius.circular(45)),
-                    gradient: LinearGradient(
-                      begin: Alignment.topRight,
-                      end: Alignment.bottomLeft,
-                      colors: [
-                        Color.fromARGB(255, 82, 0, 102),
-                        Color.fromARGB(255, 90, 0, 126),
-                        Color.fromARGB(255, 119, 0, 143),
-                      ],
-                    )
-                  ),
-                  child: SizedBox(
-                    width: 430, 
-                    child: Column(
-                    children: [
-                      devs[3].construirTitulo(title: devs[3].nome,),
-                      Image.asset(devs[3].foto, width: 350, height: 350,),
-                      Padding(padding: EdgeInsets.all(5)),
-                      Text(
-                        devs[3].funcao,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontFamily: 'ABeeZee',
-                          fontSize: 15
-                        ),
-                      ),
-                    ],)
-                  ),
-                ),
-                Container(
-                  margin: const EdgeInsets.all(16.0),
-                  padding: const EdgeInsets.all(16.0),
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black),
-                    borderRadius: BorderRadius.all(Radius.circular(45)),
-                    gradient: LinearGradient(
-                      begin: Alignment.topRight,
-                      end: Alignment.bottomLeft,
-                      colors: [
-                        Color.fromARGB(255, 82, 0, 102),
-                        Color.fromARGB(255, 90, 0, 126),
-                        Color.fromARGB(255, 119, 0, 143),
-                      ],
-                    )
-                  ),
-                  child: SizedBox(
-                    width: 430, 
-                    child: Column(
-                    
-                    children: [
-                      SizedBox(width: 380,),
-                      devs[4].construirTitulo(title: devs[4].nome,),
-                      Image.asset(devs[4].foto, width: 350, height: 350,),
-                      Padding(padding: EdgeInsets.all(5)),
-                      Text(
-                        devs[4].funcao,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontFamily: 'ABeeZee',
-                          fontSize: 15
-                        ),
-                      ),
-                    ],)
-                  ),
-                ),
-                Container(
-                  margin: const EdgeInsets.all(16.0),
-                  padding: const EdgeInsets.all(16.0),
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black),
-                    borderRadius: BorderRadius.all(Radius.circular(45)),
-                    gradient: LinearGradient(
-                      begin: Alignment.topRight,
-                      end: Alignment.bottomLeft,
-                      colors: [
-                        Color.fromARGB(255, 82, 0, 102),
-                        Color.fromARGB(255, 90, 0, 126),
-                        Color.fromARGB(255, 119, 0, 143),
-                      ],
-                    )
-                  ),
-                  child: SizedBox(
-                    width: 430, 
-                    child: Column(
-                    children: [
-                      devs[5].construirTitulo(title: devs[5].nome,),
-                      Image.asset(devs[5].foto, width: 350, height: 350,),
-                      Padding(padding: EdgeInsets.all(5)),
-                      Text(
-                        devs[5].funcao,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontFamily: 'ABeeZee',
-                          fontSize: 15
-                        ),
-                      )
-                    ],)
-                  ),
+                  },
+                  scrollDirection: Axis.vertical,
+                  itemCount: 6,
+                  controller: _controller,
+                  shrinkWrap: true,
+                  padding: const EdgeInsets.all(5),
+                  clipBehavior: Clip.antiAlias,
                 ),
               ],
             )
           ),
         ),
-      ),
+      )
     );
   }
 }

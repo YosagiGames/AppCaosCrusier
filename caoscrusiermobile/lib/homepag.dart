@@ -26,7 +26,7 @@ class _HomePag extends State<HomePag> {
       'Outras informações'
     ],
     titulo: 'Caos Crusier',
-    capa: 'img/capa.png',
+    capa: 'img/capa.jpg',
     imgs: [
       'img/cenarios/1/japao portal.jpeg',
       'img/cenarios/2/BrasilCapsula.jpeg',

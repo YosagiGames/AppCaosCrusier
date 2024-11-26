@@ -181,7 +181,7 @@ class _InspoPag extends State<InspoPag> {
                         isTocando
                           ? enduro.icons[1]
                           : enduro.icons[0],
-                        color: Colors.black,
+                        color: Color.fromARGB(255, 255, 187, 0),
                       ),
                       onPressed: (){
                         _playVideo();

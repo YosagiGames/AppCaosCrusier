@@ -289,7 +289,7 @@ class _CarCenPag extends State<CarCenPag> {
         ),
         centerTitle: true,
       ),
-      body: SingleChildScrollView(
+      body: Center(
         child: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
@@ -303,7 +303,8 @@ class _CarCenPag extends State<CarCenPag> {
           ),
           child: Column(
             children: [
-              Column(
+              SingleChildScrollView(
+                child: Column(
                   children: [
                     Container(
                       margin: const EdgeInsets.all(16.0),
@@ -325,43 +326,14 @@ class _CarCenPag extends State<CarCenPag> {
                             carros[0].construirTitulo(title: carros[0].textosPag[0]),
                             CarouselSlider(
                               options: CarouselOptions(
-                                autoPlay: true,
-                              autoPlayAnimationDuration: const Duration(seconds: 3),
-                              autoPlayInterval: const Duration(seconds: 7),
-                              enlargeCenterPage: true,
-                              onPageChanged: (currentIndex, reason) {
-                                setState(() {
-                                  index = currentIndex;
-                                });
-                              },
-                            ),
-                            items: [
-                              Container(
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
-                                  color: const Color.fromARGB(255, 0, 20, 49), 
-                                ),
-                                padding: const EdgeInsets.all(20.0),
-                                margin: const EdgeInsets.all(10.0),
-                                child: IconButton(
-                                  onPressed: () => navegacaoCarro(), 
-                                  icon: Image.asset(carros[0].img[0]),
-                                  tooltip: carros[0].nomeCarro,
-                                ),
+                                enlargeCenterPage: true,
+                                onPageChanged: (currentIndex, reason) {
+                                  setState(() {
+                                    index = currentIndex;
+                                  });
+                                },
                               ),
-                              Container(
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(45),
-                                  color: const Color.fromARGB(255, 0, 20, 49), 
-                                ),
-                                padding: const EdgeInsets.all(20.0),
-                                  margin: const EdgeInsets.all(10.0),
-                                  child: IconButton(
-                                    onPressed: () => navegacaoCarro(), 
-                                    icon: Image.asset(carros[1].img[0]),
-                                    tooltip: carros[1].nomeCarro,
-                                  ),
-                                ),
+                              items: [
                                 Container(
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(20),
@@ -371,54 +343,80 @@ class _CarCenPag extends State<CarCenPag> {
                                   margin: const EdgeInsets.all(10.0),
                                   child: IconButton(
                                     onPressed: () => navegacaoCarro(), 
-                                    icon: Image.asset(carros[2].img[0]),
-                                    tooltip: carros[2].nomeCarro,
+                                    icon: Image.asset(carros[0].img[0]),
+                                    tooltip: carros[0].nomeCarro,
                                   ),
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(20),
+                                    borderRadius: BorderRadius.circular(45),
                                     color: const Color.fromARGB(255, 0, 20, 49), 
                                   ),
                                   padding: const EdgeInsets.all(20.0),
-                                  margin: const EdgeInsets.all(10.0),
-                                  child: IconButton(
-                                    onPressed: () => navegacaoCarro(), 
-                                    icon: Image.asset(carros[3].img[0]),
-                                    tooltip: carros[3].nomeCarro,
+                                    margin: const EdgeInsets.all(10.0),
+                                    child: IconButton(
+                                      onPressed: () => navegacaoCarro(), 
+                                      icon: Image.asset(carros[1].img[0]),
+                                      tooltip: carros[1].nomeCarro,
+                                    ),
                                   ),
-                                ),
-                                Container(
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(20),
-                                    color: const Color.fromARGB(255, 0, 20, 49), 
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(20),
+                                      color: const Color.fromARGB(255, 0, 20, 49), 
+                                    ),
+                                    padding: const EdgeInsets.all(20.0),
+                                    margin: const EdgeInsets.all(10.0),
+                                    child: IconButton(
+                                      onPressed: () => navegacaoCarro(), 
+                                      icon: Image.asset(carros[2].img[0]),
+                                      tooltip: carros[2].nomeCarro,
+                                    ),
                                   ),
-                                  padding: const EdgeInsets.all(20.0),
-                                  margin: const EdgeInsets.all(10.0),
-                                  child: IconButton(
-                                    onPressed: () => navegacaoCarro(), 
-                                    icon: Image.asset(carros[4].img[0]),
-                                    tooltip: carros[4].nomeCarro,
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(20),
+                                      color: const Color.fromARGB(255, 0, 20, 49), 
+                                    ),
+                                    padding: const EdgeInsets.all(20.0),
+                                    margin: const EdgeInsets.all(10.0),
+                                    child: IconButton(
+                                      onPressed: () => navegacaoCarro(), 
+                                      icon: Image.asset(carros[3].img[0]),
+                                      tooltip: carros[3].nomeCarro,
+                                    ),
                                   ),
-                                ),
-                                Container(
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(20),
-                                    color: const Color.fromARGB(255, 0, 20, 49), 
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(20),
+                                      color: const Color.fromARGB(255, 0, 20, 49), 
+                                    ),
+                                    padding: const EdgeInsets.all(20.0),
+                                    margin: const EdgeInsets.all(10.0),
+                                    child: IconButton(
+                                      onPressed: () => navegacaoCarro(), 
+                                      icon: Image.asset(carros[4].img[0]),
+                                      tooltip: carros[4].nomeCarro,
+                                    ),
                                   ),
-                                  padding: const EdgeInsets.all(20.0),
-                                  margin: const EdgeInsets.all(10.0),
-                                  child: IconButton(
-                                    onPressed: () => navegacaoCarro(), 
-                                    icon: Image.asset(carros[5].img[0]),
-                                    tooltip: carros[5].nomeCarro,
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(20),
+                                      color: const Color.fromARGB(255, 0, 20, 49), 
+                                    ),
+                                    padding: const EdgeInsets.all(20.0),
+                                    margin: const EdgeInsets.all(10.0),
+                                    child: IconButton(
+                                      onPressed: () => navegacaoCarro(), 
+                                      icon: Image.asset(carros[5].img[0]),
+                                      tooltip: carros[5].nomeCarro,
+                                    ),
                                   ),
-                                ),
-                              ],
-                            ),
-                          ],
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
-                      ),
                       Container(
                         margin: const EdgeInsets.all(16.0),
                         padding: const EdgeInsets.all(16.0),
@@ -439,9 +437,6 @@ class _CarCenPag extends State<CarCenPag> {
                           cenarios[0].construirTitulo(title: cenarios[0].textosPag[0]),
                           CarouselSlider(
                             options: CarouselOptions(
-                              autoPlay: true,
-                              autoPlayAnimationDuration: const Duration(seconds: 3),
-                              autoPlayInterval: const Duration(seconds: 7),
                               enlargeCenterPage: true,
                               onPageChanged: (currentIndex, reason) {
                                 setState((){
@@ -521,7 +516,8 @@ class _CarCenPag extends State<CarCenPag> {
                       )
                     ),
                   ],
-              ),
+                ),
+              )
             ],
           ),
         ),

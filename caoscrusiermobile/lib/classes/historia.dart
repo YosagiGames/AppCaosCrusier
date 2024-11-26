@@ -20,6 +20,7 @@ class Historia {
   Widget construirTitulo({required String title}){
     return Text(
       title,
+      textAlign: TextAlign.center,
       style: TextStyle(
         fontFamily: 'Horizon',
         fontSize: 25,
