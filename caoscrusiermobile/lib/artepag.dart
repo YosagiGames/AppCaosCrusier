@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:audioplayers/audioplayers.dart';
 import 'package:caoscruisermobile/classes/arte.dart';
 
 class ArtePag extends StatefulWidget{
@@ -12,6 +13,10 @@ class ArtePag extends StatefulWidget{
 class _ArtePag extends State<ArtePag> {
 
   int index = 0;
+  int i = 0;
+  int msc = 0;
+  bool isTocando = false;
+  AudioPlayer audioPlayer = AudioPlayer();
 
   List<Arte> artes = [
     Arte(
@@ -46,7 +51,46 @@ class _ArtePag extends State<ArtePag> {
         Icons.arrow_back_ios
       ],
     ),
+    Arte(
+      titulo: 'Músicas',
+      textos: [
+        'Fujikawa',
+        'Guarapári',
+        'Harimo',
+        'Melbourne',
+        'Neolondres',
+      ],
+      caminhos: [
+        ''
+      ],
+      desc: '',
+      icons: [
+        Icons.play_arrow_rounded,
+        Icons.pause_rounded,
+      ],
+    ),
   ];
+
+  @override
+  void dispose() {
+    audioPlayer.dispose();
+    super.dispose();
+  }
+
+  Future<void> _playMusic() async {
+    if (isTocando && msc == i) {
+      await audioPlayer.pause();
+      setState(() {
+        isTocando = false;
+      });
+    } else {
+      await audioPlayer.play();
+      setState(() {
+        isTocando = true;
+        msc = i;
+      });
+    }
+  }
   
   @override
   Widget build(BuildContext context){
@@ -287,6 +331,38 @@ class _ArtePag extends State<ArtePag> {
                     ],
                   ),
                 ),
+                Expanded(
+              child: ListView.builder(
+                itemCount: 5,
+                itemBuilder: (context, index) {
+                  return Column(
+                    children: [
+                      Text(
+                        artes[2].textos[i],
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.white,
+                        ),
+                      ),
+                      IconButton(
+                        icon: Icon(
+                          isTocando && msc == i
+                              ? Icons
+                                  .pause 
+                              : Icons
+                                  .play_arrow, 
+                          color: Colors.white,
+                        ),
+                        onPressed: () {
+                          _playMusic();
+                        },
+                      ),
+                      SizedBox(height: 10),
+                    ],
+                  );
+                },
+              ),
+            ),
               ],
             ),
           ),
