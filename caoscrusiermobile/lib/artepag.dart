@@ -51,8 +51,10 @@ class _ArtePag extends State<ArtePag> {
         Icons.arrow_back_ios
       ],
     ),
-    Arte(
-      titulo: 'Músicas',
+  ];
+
+  final Arte musica = Arte(
+    titulo: 'Músicas',
       textos: [
         'Fujikawa',
         'Guarapári',
@@ -62,16 +64,17 @@ class _ArtePag extends State<ArtePag> {
       ],
       caminhos: [
         'musicas/japao.mp3',
+        'musicas/brasil.mp3',
         'musicas/egito.mp3',
         'musicas/australia.mp3',
+        'musicas/reino_unido.mp3'
       ],
       desc: '',
       icons: [
         Icons.play_arrow_rounded,
         Icons.pause_rounded,
       ],
-    ),
-  ];
+    );
 
   @override
   void dispose() {
@@ -86,7 +89,7 @@ class _ArtePag extends State<ArtePag> {
         isTocando = false;
       });
     } else {
-      await audioPlayer.play(AssetSource(artes[2].caminhos[i]));
+      await audioPlayer.play(AssetSource(musica.caminhos[i]));
       setState(() {
         isTocando = true;
         msc = i;
@@ -340,7 +343,7 @@ class _ArtePag extends State<ArtePag> {
                       return Column(
                         children: [
                           Text(
-                            artes[2].textos[i],
+                            musica.textos[i],
                             style: TextStyle(
                               fontSize: 18,
                               color: Colors.white,
