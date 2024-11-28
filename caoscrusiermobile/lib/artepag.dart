@@ -61,7 +61,9 @@ class _ArtePag extends State<ArtePag> {
         'Neolondres',
       ],
       caminhos: [
-        ''
+        'musicas/japao.mp3',
+        'musicas/egito.mp3',
+        'musicas/australia.mp3',
       ],
       desc: '',
       icons: [
@@ -84,7 +86,7 @@ class _ArtePag extends State<ArtePag> {
         isTocando = false;
       });
     } else {
-      await audioPlayer.play();
+      await audioPlayer.play(AssetSource(artes[2].caminhos[i]));
       setState(() {
         isTocando = true;
         msc = i;
@@ -332,37 +334,37 @@ class _ArtePag extends State<ArtePag> {
                   ),
                 ),
                 Expanded(
-              child: ListView.builder(
-                itemCount: 5,
-                itemBuilder: (context, index) {
-                  return Column(
-                    children: [
-                      Text(
-                        artes[2].textos[i],
-                        style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.white,
-                        ),
-                      ),
-                      IconButton(
-                        icon: Icon(
-                          isTocando && msc == i
-                              ? Icons
-                                  .pause 
-                              : Icons
-                                  .play_arrow, 
-                          color: Colors.white,
-                        ),
-                        onPressed: () {
-                          _playMusic();
-                        },
-                      ),
-                      SizedBox(height: 10),
-                    ],
-                  );
-                },
-              ),
-            ),
+                  child: ListView.builder(
+                    itemCount: 5,
+                    itemBuilder: (context, index) {
+                      return Column(
+                        children: [
+                          Text(
+                            artes[2].textos[i],
+                            style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.white,
+                            ),
+                          ),
+                          IconButton(
+                            icon: Icon(
+                              isTocando && msc == i
+                                  ? Icons
+                                      .pause 
+                                  : Icons
+                                      .play_arrow, 
+                              color: Colors.white,
+                            ),
+                            onPressed: () {
+                              _playMusic();
+                            },
+                          ),
+                          SizedBox(height: 10),
+                        ],
+                      );
+                    },
+                  ),
+                ),
               ],
             ),
           ),
