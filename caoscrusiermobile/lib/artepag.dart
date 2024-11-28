@@ -17,6 +17,7 @@ class _ArtePag extends State<ArtePag> {
   int msc = 0;
   bool isTocando = false;
   AudioPlayer audioPlayer = AudioPlayer();
+  final ScrollController _controller = ScrollController();
 
   List<Arte> artes = [
     Arte(
@@ -338,6 +339,11 @@ class _ArtePag extends State<ArtePag> {
                 ),
                 Expanded(
                   child: ListView.builder(
+                    shrinkWrap: true,
+                    scrollDirection: Axis.vertical,
+                    controller: _controller,
+                    padding: const EdgeInsets.all(5),
+                    clipBehavior: Clip.antiAlias,
                     itemCount: 5,
                     itemBuilder: (context, index) {
                       return Column(
