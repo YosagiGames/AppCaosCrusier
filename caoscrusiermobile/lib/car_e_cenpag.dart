@@ -20,6 +20,7 @@ class _CarCenPag extends State<CarCenPag> {
         'CARROS',
         'Informações do carro',
         'Informações do piloto',
+        'CARROS E CENÁRIOS'
       ],
       nomeCarro: 'Apophis',
       img: [
@@ -124,7 +125,7 @@ class _CarCenPag extends State<CarCenPag> {
       textosPag: [
         'CENÁRIOS',
         'Informações gerais',
-        'Desafios'
+        'Desafios',
       ],
       nome: 'Fujikawa',
       nomeOg: 'Nome original: Japão',
@@ -266,29 +267,29 @@ class _CarCenPag extends State<CarCenPag> {
 
   @override
   Widget build(BuildContext context){
-    return Scaffold(
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home:  Scaffold(
       appBar: AppBar(
-        flexibleSpace: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: <Color>[
-                Color.fromARGB(255, 26, 0, 39), 
-                Color.fromARGB(255, 125, 0, 132),
-              ]
+          flexibleSpace: Container(
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: <Color>[
+                  Color.fromARGB(255, 26, 0, 39), 
+                  Color.fromARGB(255, 125, 0, 132)
+                ]
+              ),
             ),
+          ), // cor de fundo da AppBar
+          leading: cenarios[0].construirIconButton(
+            icon: Icon(cenarios[0].icons[0]),
+            onPressed: () => Navigator.pop(context),
           ),
-        ), // cor de fundo da AppBar
-        title: const Text(
-          'CARROS E CENÁRIOS',
-          style: TextStyle(
-            fontFamily: 'MonsterRacing',
-            color: Color.fromARGB(255, 255, 187, 0),
-          ),
+          title: carros[0].construirTitleAppBar(title: carros[0].textosPag[3]),
+          centerTitle: true,
         ),
-        centerTitle: true,
-      ),
       body: Center(
         child: Container(
           decoration: const BoxDecoration(
@@ -521,7 +522,7 @@ class _CarCenPag extends State<CarCenPag> {
             ],
           ),
         ),
-      ),
+      ),)
     );
   }
 }

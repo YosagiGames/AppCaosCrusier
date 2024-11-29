@@ -59,7 +59,9 @@ class _DevsPag extends State<DevsPag> {
 
     final caosCrusier = ModalRoute.of(context)!.settings.arguments as Jogo;
 
-    return Scaffold(
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home:  Scaffold(
       appBar: AppBar(
         flexibleSpace: Container(
           decoration: const BoxDecoration(
@@ -176,7 +178,7 @@ class _DevsPag extends State<DevsPag> {
             )
           ),
         ),
-      )
+      ))
     );
   }
 }

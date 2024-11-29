@@ -1,4 +1,5 @@
 import 'package:caoscruisermobile/historiapag.dart';
+import 'package:caoscruisermobile/car_e_cenpag.dart';
 import 'package:flutter/material.dart';
 import 'package:caoscruisermobile/classes/jogo.dart';
 
@@ -75,6 +76,25 @@ class GamePag extends StatelessWidget{
                         ),
                       ),
                       Padding(padding: EdgeInsets.all(5)),
+                      ElevatedButton(
+                        onPressed: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => CarCenPag(),
+                          ),
+                        ),
+                        style: ButtonStyle(
+                          backgroundColor: WidgetStatePropertyAll(Color.fromARGB(255, 255, 187, 0))
+                        ),
+                        child: Text(
+                          caosCrusier.textosPag[9],
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontFamily: 'ABeeZee',
+                          ),
+                        ),
+                      ),
+                      Padding(padding: EdgeInsets.all(3)),
                       ElevatedButton(
                         onPressed: () => Navigator.push(
                           context,
