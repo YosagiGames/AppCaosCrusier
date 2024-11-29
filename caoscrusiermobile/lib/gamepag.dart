@@ -155,6 +155,65 @@ class GamePag extends StatelessWidget{
                           fontSize: 15,
                         ),
                       ),
+                      Padding(padding: EdgeInsets.all(7)),
+                      caosCrusier.construirTitulo(title: caosCrusier.textosPag[10]),
+                      Padding(padding: EdgeInsets.all(6)),
+                      Image.asset(caosCrusier.imgs[4]),
+                      Padding(padding: EdgeInsets.all(4)),
+                      Text(
+                        caosCrusier.controles[0],
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontFamily: 'ABeeZee',
+                          fontSize: 15,
+                        ),
+                      ),
+                      Text(
+                        caosCrusier.controles[1],
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontFamily: 'ABeeZee',
+                          fontSize: 15,
+                        ),
+                      ),
+                      Text(
+                        caosCrusier.controles[2],
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontFamily: 'ABeeZee',
+                          fontSize: 15,
+                        ),
+                      ),
+                      Text(
+                        caosCrusier.controles[3],
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontFamily: 'ABeeZee',
+                          fontSize: 15,
+                        ),
+                      ),
+                      Text(
+                        caosCrusier.controles[4],
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontFamily: 'ABeeZee',
+                          fontSize: 15,
+                        ),
+                      ),
+                      Text(
+                        caosCrusier.controles[5],
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontFamily: 'ABeeZee',
+                          fontSize: 15,
+                        ),
+                      ),
                     ],
                   ),
                 ),

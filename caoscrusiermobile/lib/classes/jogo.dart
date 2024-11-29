@@ -10,6 +10,7 @@ class Jogo {
   final String objetivo;
   final String tematica;
   final String motivoJogo;
+  final List<String> controles;
   final List<IconData> icons;
 
   const Jogo ({
@@ -22,6 +23,7 @@ class Jogo {
     required this.objetivo,
     required this.tematica,
     required this.motivoJogo,
+    required this.controles,
     required this.icons,
   });
 

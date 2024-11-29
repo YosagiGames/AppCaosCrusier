@@ -33,45 +33,11 @@ class _InspoPag extends State<InspoPag> {
     ],
     desc: 'Enduro é um jogo de corrida desenvolvido pela Activision e distribuido para Atari 2600 em 1983. Ele retrata uma corrida de resistência que dura 24 horas onde o piloto (jogador) tem o objetivo de ultrapassar diversos carros, superando obstáculos do clima e do dia e noite.',
     eventos: 'Os eventos de Enduro são gerados de acordo com o período e, por não serem aleatórios, são fáceis de se adaptar.',
-    video: 'video/enduro.mp4',
     icons: [
       Icons.play_arrow_rounded,
       Icons.pause_rounded,
     ],
   );
-
-  @override
-  void initState(){
-    super.initState();
-    _videoPlayerController = VideoPlayerController.asset(
-      enduro.video
-      )..initialize().then((_){
-        setState((){
-
-        });
-      }
-    );
-  } //define o estado do vídeo 
-
-  @override
-  void dispose() {
-    _videoPlayerController.dispose();
-    super.dispose();
-  }
-
-  Future<void> _playVideo() async {
-    if (isTocando) {
-      await _videoPlayerController.pause();
-      setState(() {
-        isTocando = false;
-      });
-    } else {
-      await _videoPlayerController.play();
-      setState(() {
-        isTocando = true;
-      });
-    }
-  }
 
   @override
   Widget build(BuildContext context){
@@ -168,24 +134,6 @@ class _InspoPag extends State<InspoPag> {
                         fontSize: 15,
                         color: Colors.white,
                       ),
-                    ),
-                    Padding(padding: EdgeInsets.all(10)),
-                    enduro.construirTitulo(title: enduro.textosPag[1]),
-                    Padding(padding: EdgeInsets.all(5)),
-                    AspectRatio(
-                      aspectRatio: _videoPlayerController.value.aspectRatio,
-                      child: VideoPlayer(_videoPlayerController) //define o tamanho do vídeo, sendo o seu tamanho original
-                    ),
-                    IconButton(
-                      icon: Icon(
-                        isTocando
-                          ? enduro.icons[1]
-                          : enduro.icons[0],
-                        color: Color.fromARGB(255, 255, 187, 0),
-                      ),
-                      onPressed: (){
-                        _playVideo();
-                      },
                     ),
                   ],
                 ),

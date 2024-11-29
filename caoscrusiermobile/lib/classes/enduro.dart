@@ -6,7 +6,6 @@ class Enduro {
   final List<String> imgs;
   final String desc;
   final String eventos;
-  final String video;
   final List<IconData> icons;
 
   Enduro({
@@ -15,7 +14,6 @@ class Enduro {
     required this.imgs,
     required this.desc,
     required this.eventos,
-    required this.video,
     required this.icons,
   });
 

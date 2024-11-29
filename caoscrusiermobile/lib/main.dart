@@ -31,7 +31,8 @@ class _MyApp extends State<MyApp> {
       'Por que estamos fazendo Caos Crusier?',
       'Veja a história de Caos Crusier',
       'Outras informações',
-      'Carros e Cenários'
+      'Carros e Cenários',
+      'Controles'
     ],
     titulo: 'Caos Crusier',
     capa: 'img/capa.jpg',
@@ -40,6 +41,7 @@ class _MyApp extends State<MyApp> {
       'img/cenarios/2/BrasilCapsula.jpeg',
       'img/cenarios/4/OperaHouse.jpeg',
       'img/cenarios/5/palacio.jpeg',
+      'img/cenarios/5/RaptorPalacio.png',
       'img/yosagilogo.jpg',
     ],
     sinopse: 'Caos Crusier é um jogo de corrida retrô inspirado nos jogos de corrida clássico dos anos 80 a 90, com o objetivo de ultrapassar diversos carros em um período de um dia. Se passa ao redor do mundo viajando por alguns países como Inglaterra, Brasil, Japão, Austrália e Egito, onde cada um tem sua estética de ambiente diferente, além de terem alguns fatores naturais únicos que o jogador enfrentará para vencer seus adversários. Com diversas opções de carros com diferentes habilidades especiais e estilos que os tornam mais incríveis e divertidos. Fique atento à pista e não relaxe pois será ultrapassado.',
@@ -47,6 +49,14 @@ class _MyApp extends State<MyApp> {
     objetivo: 'O objetivo de Caos Crusier é ultrapassar a maior quantidade de carros possíveis para aquele trajeto… Vence o jogador que atingir a quantidade estipulada. Mas também, não se deicando cair no esqeucimento a sensação de poder selecionar seu carro e cenário, apreciar de sua habilidade e liberdade durante a corrida.',
     tematica: 'De modo geral, todo o jogo está envolto na paleta de cores retrowave, construindo uma identidade visual única para nosso projeto e remetendo ao nosso objetivo inicial, migrar de um jogo retrô e traze-lo para dias atuais. Adentrando aos cenários, cada um particularmente, possui suas próprias temáticas e inspirações, assim como, os nossos personagens carros que também possuem suas temáticas únicas e entrelaçadas com nosso universo geral e história de cada país.',
     motivoJogo: 'A empresa automobilística Vektor MotorSports solicitou para a Yosagi Games produzir um jogo retrô baseado em algum outro, o qual tem que ter sido lançado entre os anos 60 e 90 e não poderia ter uma continuação. Durante a pesquisa que foi feita foram encontrados diversos jogos e um que chamou a atenção da equipe foi Enduro, um jogo de corrida singleplayer (onde só um jogador pode jogar por vez) feito pela Activision e distribuído para consoles (outra nomenclatura para videogame) da Atari. Com isso, a equipe fez Caos Cruiser, um jogo de corrida 3D que se passa por várias partes do globo terrestre e traz ao jogador a possibilidade de escolher qual veículo irá utilizar.',
+    controles: [
+      'Tecla W = permite o carro acelerar.',
+      'Tecla A = permite o carro virar para a direita.',
+      'Tecla S = permite o carro virar para a esquerda.',
+      'Tecla D = permite o carro dar ré ou frear.',
+      'Tecla Tab = permite o jogador rever os controles do jogo.',
+      'Tecla Esc = permite o jogador pausar o jogo e ver as configurações, ir para o menu ou sair do jogo.',
+    ],
     icons: [
       Icons.home,
       Icons.sports_esports,
@@ -60,6 +70,7 @@ class _MyApp extends State<MyApp> {
   @override
   Widget build(BuildContext context){
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           flexibleSpace: Container(
@@ -83,7 +94,7 @@ class _MyApp extends State<MyApp> {
           ),
           centerTitle: true,
           leading: caosCrusier.construirIconButton(
-            icon: CircleAvatar(foregroundImage: AssetImage(caosCrusier.imgs[4]),),
+            icon: CircleAvatar(foregroundImage: AssetImage(caosCrusier.imgs[5]),),
             onPressed: () => Navigator.push(
               context,
               MaterialPageRoute(
