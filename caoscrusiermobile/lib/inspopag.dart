@@ -1,6 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:video_player/video_player.dart';
 import 'package:caoscruisermobile/classes/jogo.dart';
 import 'package:caoscruisermobile/classes/enduro.dart';
 
@@ -13,7 +12,6 @@ class InspoPag extends StatefulWidget {
 
 class _InspoPag extends State<InspoPag> {
 
-  late VideoPlayerController _videoPlayerController;
   bool isTocando = false;
 
   final Enduro enduro = Enduro(

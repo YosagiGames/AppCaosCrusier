@@ -166,6 +166,9 @@ class _CarroPag extends State<CarroPag> {
                       items: [
                         Image.asset(carro.img[0]),
                         Image.asset(carro.img[1]),
+                        Image.asset(carro.img[2]),
+                        Image.asset(carro.img[3]),
+                        Image.asset(carro.img[4]),
                       ],
                     ),
                     Padding(padding: EdgeInsets.all(10)),
