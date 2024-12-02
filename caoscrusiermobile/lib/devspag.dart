@@ -75,11 +75,11 @@ class _DevsPag extends State<DevsPag> {
             ),
           ),
         ),
-        leading: caosCrusier.construirIconButton(
+        leading: yosagiGames.construirIconButton(
           icon: Icon(caosCrusier.icons[5]),
           onPressed: () => Navigator.pop(context),
         ),
-        title: caosCrusier.construirTitleAppBar(title: caosCrusier.textosPag[2]),
+        title: devs[0].construirTitleAppBar(title: caosCrusier.textosPag[2]),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
