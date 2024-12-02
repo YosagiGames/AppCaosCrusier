@@ -256,7 +256,8 @@ class _CarCenPag extends State<CarCenPag> {
     ),
   ];
 
-  int index = 0;
+  int indexCar = 0;
+  int indexCen = 0;
 
   navegacaoCarro(){
     Navigator.push(
@@ -264,7 +265,7 @@ class _CarCenPag extends State<CarCenPag> {
       MaterialPageRoute(
         builder: (context) => const CarroPag(),
         settings: RouteSettings(
-          arguments: carros[index],
+          arguments: carros[indexCar],
         ),
       ),
     );
@@ -276,7 +277,7 @@ class _CarCenPag extends State<CarCenPag> {
       MaterialPageRoute(
         builder: (context) => const CenarioPag(),
         settings: RouteSettings(
-          arguments: cenarios[index]
+          arguments: cenarios[indexCen]
         ),
       ),
     );
@@ -345,7 +346,7 @@ class _CarCenPag extends State<CarCenPag> {
                             enlargeCenterPage: true,
                             onPageChanged: (currentIndex, reason) {
                               setState(() {
-                                index = currentIndex;
+                                indexCar = currentIndex;
                               });
                             },
                           ),
@@ -456,7 +457,7 @@ class _CarCenPag extends State<CarCenPag> {
                             enlargeCenterPage: true,
                             onPageChanged: (currentIndex, reason) {
                               setState((){
-                                index = currentIndex;
+                                indexCen = currentIndex;
                               });
                             },
                           ),
