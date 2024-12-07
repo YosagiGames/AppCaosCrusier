@@ -18,7 +18,7 @@ Nas páginas da Wiki irão ser detalhados o protótipo, os diagramas, todo o des
 <a href="https://github.com/YosagiGames/AppCaosCruiser/wiki/Prot%C3%B3tipo"> Protótipo </a>
 
 ## Estudo de Caso
-<a href="https://github.com/YosagiGames/AppCaosCrusier/wiki/Estudo-de-Caso-e-Diagramas"> Estudo de caso e diagrama </a>
+<a href="https://github.com/YosagiGames/AppCaosCrusier/wiki/Estudo-de-Caso-e-Diagrama-de-Classes"> Estudo de caso e diagrama </a>
 
 ## Desenvolvimento do Aplicativo
 <a href="https://github.com/YosagiGames/AppCaosCruiser/wiki/Desenvolvimento"> Desenvolvimento </a>
