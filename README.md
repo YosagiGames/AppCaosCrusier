@@ -14,13 +14,19 @@ Nas páginas da Wiki irão ser detalhados o protótipo, os diagramas, todo o des
 ## Informações sobre Caos Crusier
 <a href="https://github.com/YosagiGames/AppCaosCruiser/wiki/Sobre-Caos-Crusier"> Informações sobre Caos Crusier </a>
 
-## Protótipo
+## Protótipo do Aplicativo
 <a href="https://github.com/YosagiGames/AppCaosCruiser/wiki/Prot%C3%B3tipo"> Protótipo </a>
 
-## Desenvolvimento
+## Estudo de Caso
+<a href="https://github.com/YosagiGames/AppCaosCrusier/wiki/Estudo-de-Caso-e-Diagramas"> Estudo de caso e diagrama </a>
+
+## Desenvolvimento do Aplicativo
 <a href="https://github.com/YosagiGames/AppCaosCruiser/wiki/Desenvolvimento"> Desenvolvimento </a>
 
 # Links externos
 
-## Protótipo no Figma
-- <a href="https://www.figma.com/design/ijJD3BGB6cjX9yy0TPGd63/Caos-Cruiser-App?node-id=0-1&t=E48Jm21ChwONgqTl-1"> Link do Figma </a>
+## Caos Crusier
+- <a href="https://github.com/YosagiGames/CaosCrusier"> Caos Crusier </a>
+
+## Protótipo no Canva
+- <a href="https://www.canva.com/design/DAGUS0-HrpM/wBe-VVEE69slBMRDo9YjbQ/edit"> Link do Canva </a>
