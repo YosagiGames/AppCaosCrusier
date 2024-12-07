@@ -20,9 +20,6 @@ Nas páginas da Wiki irão ser detalhados o protótipo, os diagramas, todo o des
 ## Desenvolvimento
 <a href="https://github.com/YosagiGames/AppCaosCruiser/wiki/Desenvolvimento"> Desenvolvimento </a>
 
-## Widgets
-<a href="https://github.com/YosagiGames/AppCaosCruiser/wiki/Widgets"> Widgets </a>
-
 # Links externos
 
 ## Protótipo no Figma
